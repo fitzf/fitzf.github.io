@@ -114,7 +114,7 @@
     <link href="http://zhangfei.tk/2017/07/07/%E5%BF%AB%E9%80%9F%E5%88%87%E6%8D%A2hosts%E6%96%87%E4%BB%B6%E7%9A%84%E5%BC%80%E6%BA%90%E7%A8%8B%E5%BA%8FSwitchHosts/"/>
     <id>http://zhangfei.tk/2017/07/07/快速切换hosts文件的开源程序SwitchHosts/</id>
     <published>2017-07-07T14:44:50.000Z</published>
-    <updated>2017-07-07T14:51:46.000Z</updated>
+    <updated>2017-07-07T15:26:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>SwitchHosts 是一款用于快速切换 hosts 文件的开源小程序，基于 MIT 协议开源。拥有Windows版, Linux版和Mac OS 版。基于 Electron 开发，同时使用了 React、Ant Design 以及 CodeMirror 等框架/库。需要 Node.js 环境。</p>
 <p><img src="/images/pasted-25.png" alt="upload successful"></p>
@@ -140,12 +140,12 @@
     
       <category term="Collection" scheme="http://zhangfei.tk/categories/Collection/"/>
     
-      <category term="Softwore" scheme="http://zhangfei.tk/categories/Collection/Softwore/"/>
+      <category term="Software" scheme="http://zhangfei.tk/categories/Collection/Software/"/>
     
     
       <category term="Hosts" scheme="http://zhangfei.tk/tags/Hosts/"/>
     
-      <category term="Softwore" scheme="http://zhangfei.tk/tags/Softwore/"/>
+      <category term="Software" scheme="http://zhangfei.tk/tags/Software/"/>
     
   </entry>
   
