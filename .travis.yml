@@ -8,8 +8,7 @@ before_script:
 script:
   - hexo clean
   - hexo g
-  - cp ./README.md ./source/README.md
-  
+
 # after_script:
 #   - cd ./public
 #   - git init
