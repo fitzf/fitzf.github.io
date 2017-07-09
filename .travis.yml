@@ -29,6 +29,7 @@ deploy:
   on:
     branch: blog-source
   local_dir: public
+  target_branch: master
 
 env:
   global:
