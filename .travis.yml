@@ -1,0 +1,35 @@
+language: node_js
+
+node_js: stable
+
+before_script:
+  - npm install -g hexo-cli
+
+script:
+  - hexo clean
+  - hexo g
+
+# after_script:
+#   - cd ./public
+#   - git init
+#   - git config user.name "iissnan"
+#   - git config user.email "email_address"
+#   - git add .
+#   - git commit -m "Update docs"
+#   - git push -f "https://${GH_TOKEN}@${GH_REF}" master:master
+
+branches:
+  only:
+    - blog-source
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GH_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: blog-source
+  local_dir: public
+
+env:
+  global:
+    - secure: jLsDwnBSvXBI6RB2yeSxumE5p8KIk18W6RiAlQ50UuspRGPVeV9gBDfshhRcb/C93tBZMltK/67stARh24q2CcMraifXTYMIkmzlDrRVZUgiAzAeEiyGjt/r/0dxVaEKVF7Q19RfAKhJHY4gBLS8ZFzyP7v2NzsZmDal3W7wUOhKTj/uPQFuaQgtoOq+AeCm+QBZoPRwFkDu0bX9Ak6f7wyKIuU+Tg6AbRquDY2ni1o/dcgfFzDesdCMpMn0L8nJseKGrtE9W2xb+a+sZmxvKifTKX/6V71Uyy02htLnRJ8hqAQDoHgcPjvfSd02TMjbmUIiwl9pOi7RCuUXexIB9acYdXsfu5v5n4ghizdNr8uNFoc8ha2Ex2TNImSZKyS+YCQsz9wKODlOZnLNVxEB56PW6TxTQyiRSCSsisHuNYvuL186/3U7VsXIB1a2p8Xx83UAG6tF3bwtyPdWLJNHZqaDXsuPZq9mYfh5balkyOoMRdJ5UYuKVT58mHDecOnw40+77JEDi7QT7QUpkMESn4EWLRZ5KwKQhMmBV1I0I885W4q/yv+CzFAmSEnC9TBY8s9io5jyY2NgkTqKxzH6grwX1PXofXnHMbUxOW7pVopxhpNdOTxDErY+OlF7Vu3LoB0yPf/kULwl3Av3aCyTGQifzGmMxBKWHA/KwX+zjEg=
