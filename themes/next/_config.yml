@@ -49,7 +49,7 @@ menu:
   about: /about
   archives: /archives
   tags: /tags
-  sitemap: /sitemap.xml
+  # sitemap: /sitemap.xml
   #commonweal: /404.html
 
 
@@ -344,7 +344,7 @@ changyan:
 #    button | slide
 # Warning: Baidu Share does not support https.
 baidushare: true
-##  type: button
+ type: slide
 
 # Share
 #jiathis:
