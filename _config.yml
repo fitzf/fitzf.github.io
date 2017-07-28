@@ -28,8 +28,6 @@ i18n_dir: :lang
 skip_render: 
   - README.md
   - source/README.md
-  - source/baidu_verify_mOIjxDUrIh.html
-  - source/google2e9157bbf2463317.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
