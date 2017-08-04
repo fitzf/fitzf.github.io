@@ -16,4 +16,3 @@ date: 2017-07-12 00:42:54
     - [Groovy Documentation](http://www.groovy-lang.org/documentation.html)
 - Python
     - [Python 2.7.13 documentation](https://docs.python.org/2/)
-![K8s](https://d33wubrfki0l68.cloudfront.net/1567471e7c58dc9b7d9c65dcd54e60cbf5870daa/a2249/images/flower.png)
