@@ -2,7 +2,7 @@
 title: About
 date: 2017-07-12 00:42:54
 ---
-![Docker](https://www.docker.com/sites/default/files/dockertwo_0.png)
+![I'm a coder](/images/timg.jpeg)
 - Docker
     - [Docker Docs](https://docs.docker.com)
 - Kubernetes
@@ -15,5 +15,3 @@ date: 2017-07-12 00:42:54
     - [Groovy Documentation](http://www.groovy-lang.org/documentation.html)
 - Python
     - [Python 2.7.13 documentation](https://docs.python.org/2/)
-
-![I'm a coder](/images/timg.jpeg)
