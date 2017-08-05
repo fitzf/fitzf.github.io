@@ -125,11 +125,14 @@ social_icons:
   知乎: chrome
 
 # Blog rolls
-#links_title: Links
-#links_layout: block
+links_title: Links
+links_layout: block
 #links_layout: inline
-#links:
-  #Title: http://example.com/
+links:
+  Docker Documentation: https://docs.docker.com
+  Kubernetes Documentation: https://kubernetes.io/docs/home
+  Spring-Boot-1.5.6.RELEASE: http://docs.spring.io/spring-boot/docs/1.5.6.RELEASE/reference/htmlsingle/#common-application-properties
+  Spring-Cloud-Dalston.SR2: http://cloud.spring.io/spring-cloud-static/Dalston.SR2
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
@@ -372,7 +375,7 @@ baidushare:
 #google_site_verification:
 
 # Google Analytics
-#google_analytics:
+google_analytics: 104138524-1
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/

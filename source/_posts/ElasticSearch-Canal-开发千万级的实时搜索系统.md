@@ -2,6 +2,8 @@
 title: ElasticSearch + Canal 开发千万级的实时搜索系统
 date: 2017-04-08 17:50:29
 tags:
+  - Java
+  - ElasticSearch
 categories: Essay
 ---
 公司是做社交相关产品的，社交类产品对搜索功能需求要求就比较高，需要根据用户城市、用户ID昵称等进行搜索。

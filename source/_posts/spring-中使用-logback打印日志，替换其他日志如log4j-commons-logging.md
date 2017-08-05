@@ -1,5 +1,5 @@
 ---
-title: 'spring 中使用 logback打印日志，替换其他日志如log4j,commons-logging'
+title: 'Spring 中使用 logback打印日志，替换其他日志如log4j,commons-logging'
 date: 2017-03-21 19:42:32
 tags: [Java, Spring]
 categories: Essay

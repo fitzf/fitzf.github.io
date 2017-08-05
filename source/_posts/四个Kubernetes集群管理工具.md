@@ -4,6 +4,7 @@ author: Zhang Fei
 date: 2017-05-18 20:33:40
 tags:
   - Kubernetes
+  - Docker
 categories: [Essay]
 ---
 几乎所有用过Kubernetes的人都会发现其缺点，随着大K在负载平衡和工作管理方面的重大改进，用户可以将注意力逐渐转移到其他地方了，这里有四个项目可以减轻Kubernetes集群管理的负载。
