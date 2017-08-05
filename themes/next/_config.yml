@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Zhangfei, Blog"
+keywords: "Zhangfei, zhangfei, fei, Blog, Java, java, docker, k8s, python, go, golang"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -80,7 +80,7 @@ menu_icons:
 #scheme: Muse
 #scheme: Mist
 scheme: Pisces
-#scheme: Gemini
+# scheme: Gemini
 
 
 # ---------------------------------------------------------------
