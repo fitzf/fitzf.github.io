@@ -96,7 +96,7 @@ social:
   Weibo: http://dwz.cn/6gDiHG
   知乎: http://dwz.cn/6gDrPE
   StackOverflow: https://stackoverflow.com/questions
-  E-Mail: zhangfei.eason@gmail.com
+  E-Mail: https://zhangfei.eason@gmail.com
   #LinkLabel: Link
 
 # Social Links Icons
@@ -658,7 +658,7 @@ vendors:
 
   # three_waves
   # https://github.com/jjandxa/canvas_sphere
-  canvas_sphere:
+  canvas_sphere: true
 
   # Internal version: 1.0.0
   # https://github.com/zproo/canvas-ribbon
