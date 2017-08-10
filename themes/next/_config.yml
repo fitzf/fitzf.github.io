@@ -363,7 +363,7 @@ baidushare:
   type: slide
 
 # Share
-#jiathis:
+jiathis: true
 # Warning: JiaThis does not support https.
 #add_this_id:
 
@@ -372,7 +372,7 @@ baidushare:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: 3-wJ4Vc1s0T2ob2EFT0ejNdA0SF6iG4LD5qSwm8uW6A
 
 # Google Analytics
 google_analytics: 104138524-1
