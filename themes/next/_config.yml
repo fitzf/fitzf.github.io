@@ -360,7 +360,7 @@ changyan:
 #    button | slide
 # Warning: Baidu Share does not support https.
 baidushare:
-  type: slide
+  type: button
 
 # Share
 jiathis: true
