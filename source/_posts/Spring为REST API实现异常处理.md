@@ -94,7 +94,7 @@ public class RestResponseStatusExceptionResolver extends AbstractHandlerExceptio
 }
 ```
 
-# 解决方案3 使用@ControllerAdvice(@RestControllerAdvice)注解(需要Spring 3.2)
+# 解决方案3 - 使用@ControllerAdvice(@RestControllerAdvice)注解(需要Spring 3.2)
 
 @ControllerAdvice注释来支持全局@ExceptionHandler。
 
