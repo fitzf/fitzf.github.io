@@ -5,7 +5,7 @@ tags:
   - Java
   - Spring
   - Spring Boot
-  - Rest
+  - Rest API
 categories:
   - Collection
 ---
