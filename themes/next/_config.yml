@@ -179,7 +179,7 @@ sidebar:
 
   # Scroll percent label in b2t button
   scrollpercent: true
-  
+
   # Enable sidebar on narrow view
   onmobile: false
 
@@ -363,7 +363,7 @@ baidushare:
   type: slide
 
 # Share
-# jiathis: true
+#jiathis:
 # Warning: JiaThis does not support https.
 #add_this_id:
 
