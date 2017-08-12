@@ -11,7 +11,7 @@ categories:
 ---
 > 在Spring 3.2之前，在Spring MVC应用程序中处理异常的两种主要方法是：HandlerExceptionResolver或@ExceptionHandler注释。这两个都有一些明显的缺点。3.2之后，我们现在有了新的@ControllerAdvice注释来解决前面两个解决方案的局限性。所有这些都有一个共同点 - 他们处理分离问题非常好。应用程序可以正常抛出异常以指示某种类型的异常 - 然后将单独处理异常。
 
-# 解决方案1 ​​ - 控制器级别@ExceptionHandler
+# 解决方案1 - 控制器级别@ExceptionHandler
 
 在@Controller class中定义一个方法来处理异常, 并加上@ExceptionHandler annotation：
 
@@ -114,4 +114,4 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 
 解决@ExceptionHandler不能全局处理。
 
->> 原文链接: [http://www.baeldung.com/exception-handling-for-rest-with-spring](http://www.baeldung.com/exception-handling-for-rest-with-spring)
+>> 原文链接: [http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-ann-rest-spring-mvc-exceptions](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-ann-rest-spring-mvc-exceptions)
