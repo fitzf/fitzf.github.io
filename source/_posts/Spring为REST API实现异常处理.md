@@ -78,7 +78,7 @@ public class RestResponseStatusExceptionResolver extends AbstractHandlerExceptio
             }
             ...
         } catch (Exception handlerException) {
-            logger.warn("Handling of [" + ex.getClass().getName() + "] 
+            logger.warn("Handling of [" + ex.getClass().getName() + "]
               resulted in Exception", handlerException);
         }
         return null;
@@ -94,7 +94,7 @@ public class RestResponseStatusExceptionResolver extends AbstractHandlerExceptio
 }
 ```
 
-# 解决方案3 - 使用@ControllerAdvice(@RestControllerAdvice)注解(需要Spring 3.2)
+# 解决方案3 - 使用@ControllerAdvice(@RestControllerAdvice)注解(需要Spring 3.2及以上de版本)
 
 @ControllerAdvice注释来支持全局@ExceptionHandler。
 
@@ -106,7 +106,7 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
     @ResponseBody
     protected ResponseEntity<Object> handleConflict(RuntimeException ex, WebRequest request) {
         String bodyOfResponse = "This should be application specific";
-        return handleExceptionInternal(ex, bodyOfResponse, 
+        return handleExceptionInternal(ex, bodyOfResponse,
           new HttpHeaders(), HttpStatus.CONFLICT, request);
     }
 }
