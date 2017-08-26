@@ -47,12 +47,12 @@ index_with_subtitle: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  categories: /categories
-  about: /about
-  archives: /archives
-  tags: /tags
-  # sitemap: /sitemap.xml
-  #commonweal: /404.html
+  #categories: /categories/
+  #about: /about/
+  archives: /archives/
+  tags: /tags/
+  #sitemap: /sitemap.xml
+  #commonweal: /404/
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -348,8 +348,8 @@ changyan:
   appid:
   appkey:
 
-    
-# Valine. 
+
+# Valine.
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://github.com/xCss/Valine
 valine:
@@ -376,8 +376,11 @@ baidushare:
   type: slide
 
 # Share
-#jiathis:
+# This plugin is more useful in China, make sure you known how to use it.
+# And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
+#jiathis:
+  ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
 # Share

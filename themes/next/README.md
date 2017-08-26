@@ -104,6 +104,11 @@ NexT is a high quality elegant [Hexo](http://hexo.io) theme. It is crafted from 
 
     theme: next
 
+### Bugs
+For those who also encounter **Error: Cannot find module 'hexo-util'** [issue](../../issues/1490), please check your NPM version. 
+
+- `> 3`: Still not work. Please remove `node_modules` directory and reinstall using `npm install`.
+- `< 3`: Please add `hexo-util` explicitly via `npm install --save-dev hexo-util` to you site package deps.
 
 ## Update
 
@@ -133,6 +138,8 @@ With this feature, now you can put all your configurations into one place (`sour
 1. Please ensure you are using Hexo 3 (or above)
 2. Create an file named `next.yml` in site's `source/_data` directory (create `_data` directory if it did not exist)
 3. Copy NexT theme options both in site's `_config.yml` and theme's `_config.yml` into `next.yml`.
+4. Use `--config source/_data/next.yml` parameter to start server, generate or deploy.\
+   For example: `hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml`.
 
 ## Features
 
