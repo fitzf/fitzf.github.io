@@ -181,12 +181,16 @@ NunjucksAsyncBlock.prototype.parse = function(parser, nodes, lexer) {
 
 NunjucksAsyncBlock.prototype.run = function(context, args, body, callback) {
   // enable async tag nesting
-  body((err, result) => {
+  var self = this;
+
+  body(function(err, result) {
     // wrapper for trimBody expecting
     // body to be a function
-    body = () => result || '';
+    body = function() {
+      return result || '';
+    };
 
-    this._run(context, args, trimBody(body)).then(function(result) {
+    self._run(context, args, trimBody(body)).then(function(result) {
       callback(err, result);
     });
   });
