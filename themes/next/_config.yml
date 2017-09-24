@@ -92,9 +92,9 @@ scheme: Pisces
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
-#social:
-  #GitHub: https://github.com/yourname || github
-  #E-Mail: mailto:yourname@gmail.com || envelope
+social:
+  GitHub: https://github.com/zhangfei9734 || github
+  E-Mail: zhangfei.eason@gmail.com || envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -103,35 +103,15 @@ scheme: Pisces
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-# Value is the target link (E.g. GitHub: https://github.com/iissnan)
-social:
-  GitHub: https://github.com/zhangfei9734
   Git@OSC: http://git.oschina.net/eason_zhangfei
   Weibo: http://dwz.cn/6gDiHG
   知乎: http://dwz.cn/6gDrPE
   StackOverflow: https://stackoverflow.com/questions
-  E-Mail: https://zhangfei.eason@gmail.com
-  #LinkLabel: Link
 
 social_icons:
   enable: true
   icons_only: false
   transition: false
-  # Icon Mappings.
-  # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  E-Mail: envelope
-  Google: google
-  Twitter: twitter
-  FB Page: facebook
-  VK Group: vk
-  Skype: skype
-  YouTube: youtube
-  Instagram: instagram
-  StackOverflow: stack-overflow
-  Weibo: weibo
-  Git@OSC: git
-  知乎: chrome
 
 # Blog rolls
 links_title: Links
@@ -146,9 +126,6 @@ links:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
-# in theme directory(source/images): /images/avatar.jpg
-# in site  directory(source/uploads): /uploads/avatar.jpg
 avatar: https://avatars0.githubusercontent.com/u/16345433?v=3&s=460
 
 # Table Of Contents in the Sidebar
@@ -284,33 +261,42 @@ highlight_theme: normal
 # - Be aware that setting too much fonts will cause site running slowly
 # - Introduce in 5.0.1
 # ---------------------------------------------------------------
+# CAUTION! Safari Version 10.1.2 bug: https://github.com/iissnan/hexo-theme-next/issues/1844
+# To avoid space between header and sidebar in Pisces / Gemini themes recommended to use Web Safe fonts for `global` (and `logo`):
+# Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
+# ---------------------------------------------------------------
 font:
-  enable: true
+  enable: false
 
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
+  # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
+
+  # Font options:
+  # `external: true` will load this font family from `host` above.
+  # `family: Times New Roman`. Without any quotes.
+  # `size: xx`. Use `px` as unit.
 
   # Global font settings used on <body> element.
   global:
-    # external: true will load this font family from host.
     external: true
     family: Lato
+    size:
 
-  # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
+  # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
   # Fallback to `global` font settings.
   headings:
     external: true
     family:
+    size:
 
-  # Font settings for posts
+  # Font settings for posts.
   # Fallback to `global` font settings.
   posts:
     external: true
     family:
 
-  # Font settings for Logo
+  # Font settings for Logo.
   # Fallback to `global` font settings.
-  # The `size` option use `px` as unit
   logo:
     external: true
     family:
