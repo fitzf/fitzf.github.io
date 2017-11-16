@@ -31,6 +31,8 @@ var re = new RegExp('\\b(' + toBe.join('|') + ')\\b', 'gi');
 
 module.exports = function (text) {
     var suggestions = [];
+    if (!text || text.length === 0) return suggestions;
+    text = text.replace(/[\u2018\u2019]/g, "'"); // convert smart quotes
     while (match = re.exec(text)) {
         var be = match[0].toLowerCase();
         suggestions.push({

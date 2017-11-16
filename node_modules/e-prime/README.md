@@ -4,7 +4,7 @@
 [![Downloads][downloads-image]][downloads-url]
 
 # e-prime
-npm module for detecting ['to be'](https://en.wikipedia.org/wiki/E-Prime) verbs.
+npm module for detecting ['to be'](https://en.wikipedia.org/wiki/E-Prime) verbs. Also a module used within [write-good](https://github.com/btford/write-good).
 
 ## Install
 
