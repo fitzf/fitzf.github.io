@@ -533,7 +533,7 @@ rating:
 leancloud_visitors:
   enable: true
   app_id: 4lGJ1v9lzpF1QOO20kGGoKpB-gzGzoHsz
-  app_key: #<app_key>
+  app_key: TBNkObI72zlxA5z1ToT6xtu8
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
