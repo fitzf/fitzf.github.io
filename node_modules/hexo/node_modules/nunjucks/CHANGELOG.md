@@ -2,6 +2,29 @@ Changelog
 =========
 
 
+3.1.2 (Feb 23 2018)
+-------------------
+
+* Fix regression to make `chokidar` an optional dependency again. Fixes
+  [#1073](https://github.com/mozilla/nunjucks/issues/1073)
+* Fix issue when running `npm install nunjucks` with the `--no-bin-links` flag
+* Fix regression that broke template caching. Fixes
+  [#1074](https://github.com/mozilla/nunjucks/issues/1074)
+
+3.1.0 (Feb 19 2018)
+-------------------
+
+* Support nunjucks.installJinjaCompat() with slim build. Fixes
+  [#1019](https://github.com/mozilla/nunjucks/issues/1019)
+
+* Fix calling render callback twice when a conditional import throws an error.
+  Solves [#1029](https://github.com/mozilla/nunjucks/issues/1029)
+
+* Support objects created with Object.create(null). fixes [#468](https://github.com/mozilla/nunjucks/issues/468)
+
+* Support ESNext iterators, using Array.from. Merge of
+  [#1058](https://github.com/mozilla/nunjucks/pull/1058)
+
 3.0.1 (May 24 2017)
 -------------------
 
