@@ -1,6 +1,6 @@
 linters:
   eslint:
-    config: ./.eslintrc.json
+    config: https://github.com/theme-next/eslint-config-theme-next/index.js
 files:
   ignore:
     - 'bower_components/*'
