@@ -3,9 +3,10 @@
 $(document).ready(function() {
 
   var sidebarInner = $('.sidebar-inner');
+  var sidebarOffset = CONFIG.sidebar.offset ? CONFIG.sidebar.offset : 12;
 
   function getHeaderOffset() {
-    return $('.header-inner').height() + CONFIG.sidebar.offset;
+    return $('.header-inner').height() + sidebarOffset;
   }
 
   function getFooterOffset() {
@@ -29,7 +30,7 @@ $(document).ready(function() {
     if (headerOffset + sidebarHeight < contentHeight) {
       sidebarInner.affix({
         offset: {
-          top   : headerOffset - CONFIG.sidebar.offset,
+          top   : headerOffset - sidebarOffset,
           bottom: footerOffset
         }
       });
@@ -38,22 +39,25 @@ $(document).ready(function() {
     setSidebarMarginTop(headerOffset).css({ 'margin-left': 'initial' });
   }
 
-  function recalculateAffixPosition() {
+  /* function recalculateAffixPosition() {
     $(window).off('.affix');
     sidebarInner.removeData('bs.affix').removeClass('affix affix-top affix-bottom');
     initAffix();
-  }
+  } */
 
   function resizeListener() {
     var mql = window.matchMedia('(min-width: 991px)');
     mql.addListener(function(e) {
       if (e.matches) {
-        recalculateAffixPosition();
+        //recalculateAffixPosition();
+        sidebarInner.affix('checkPosition');
       }
     });
   }
 
   initAffix();
   resizeListener();
+  // Fixed wrong top alignment if page scrolled to the bottom after cleared cache and browser refresh.
+  sidebarInner.affix('checkPosition');
 
 });
