@@ -1,5 +1,3 @@
-// TODO: Refactor.
-
 .posts-expand {
   padding-top: 40px;
 }
@@ -10,19 +8,10 @@
   }
 
   .post-body {
-    pre {
-      .gutter pre {
-        padding-right: 10px;
-      }
-    }
-
     .highlight {
-      margin-left: 0px;
-      margin-right: 0px;
+      margin-left: 0;
+      margin-right: 0;
       padding: 0;
-      .gutter pre {
-        padding-right: 10px;
-      }
     }
   }
 }
@@ -31,6 +20,7 @@
   +desktop() {
     text-align: unquote(hexo-config('text_align.desktop'));
   }
+
   +tablet-mobile() {
     text-align: unquote(hexo-config('text_align.mobile'));
   }
@@ -39,10 +29,10 @@
     padding-top: 10px;
 
     .header-anchor {
+      border-bottom-style: none;
+      color: $grey-light;
       float: right;
       margin-left: 10px;
-      color: $grey-light;
-      border-bottom-style: none;
       visibility: hidden;
 
       &:hover {
@@ -56,9 +46,9 @@
   }
 
   img {
-    box-sizing: border-box;
-    margin: 0 auto 25px;
-    padding: 3px;
     border: 1px solid $gray-lighter;
+    box-sizing: border-box;
+    margin: 0 auto 20px;
+    padding: 3px;
   }
 }
