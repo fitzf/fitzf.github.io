@@ -1,11 +1,11 @@
 {%- set valine_uri = theme.vendors.valine | default('//unpkg.com/valine/dist/Valine.min.js') %}
 
 <script>
-NexT.utils.getScript('{{ valine_uri }}', function() {
+NexT.utils.getScript('{{ valine_uri }}', () => {
   var GUEST = ['nick', 'mail', 'link'];
   var guest = '{{ theme.valine.guest_info }}';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
+  guest = guest.split(',').filter(item => {
+    return GUEST.includes(item);
   });
   new Valine({
     el: '#comments',

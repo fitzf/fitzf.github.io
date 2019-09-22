@@ -1,4 +1,4 @@
-{% import '../../_macro/menu/menu-item.swig' as menu_item %}
+{% import 'menu-item.swig' as menu_item %}
 
 {%- if theme.menu %}
   <ul id="menu" class="menu">
@@ -15,7 +15,7 @@
           {%- endif %}
         {%- endfor %}
       {% else %}
-      {# Main Menu (standart menu items) #}
+      {# Main Menu (standard menu items) #}
         {%- set itemName = name.toLowerCase() %}
         {{- menu_item.render(name, respath) | trim -}}
       {%- endif -%}
