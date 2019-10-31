@@ -1,6 +1,8 @@
+---
 title: Java 线上 CPU100% 排查思路
 author: Zhang Fei
-tags: []
+tags:
+  - Java
 categories:
   - Collection
 date: 2019-10-31 17:09:00
@@ -90,8 +92,8 @@ jmap -dump:live,format=b,file=problem.bin <pid>
 1. 如果是正常的用户线程，则通过该线程的堆栈信息查看其具体是在哪处用户代码处运行比较消耗 CPU
 2. 如果该线程是 **VM Thread** 则通过 `jstat -gcutil <pid> <period> <times>` 命令监控当前系统的 GC 状况，然后通过 `jmap dump:format=b,file=<filepath> <pid>` 导出系统当前的内存数据，导出之后将内存情况放到 eclipse 的 mat 工具中进行分析即可得出内存中主要是什么对象比较消耗内存，进而可以处理相关代码
 
-> 参考链接
+> 参考链接:
 > - https://blog.csdn.net/baiye_xing/article/details/90483169
 > - https://my.oschina.net/zhangxufeng/blog/3017521
 > - https://www.cnblogs.com/youxin/p/11229071.html
-> - [JVM故障分析及性能优化系列文章 https://www.javatang.com/archives/2017/10/19/33151873.html](https://www.javatang.com/archives/2017/10/19/33151873.html)
+> - [JVM 故障分析及性能优化系列文章](https://www.javatang.com/archives/2017/10/19/33151873.html)
