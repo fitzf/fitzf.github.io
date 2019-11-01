@@ -243,7 +243,7 @@ excerpt_description: true
 # Automatically excerpt (Not recommend).
 # Use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Read more button
@@ -676,7 +676,7 @@ rating:
 
 # AddThis Share. See: https://www.addthis.com
 # Go to https://www.addthis.com/dashboard to customize your tools.
-add_this_id:
+add_this_id: ra-5dbb98e1e900ca44
 
 
 # ---------------------------------------------------------------
