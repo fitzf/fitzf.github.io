@@ -26,20 +26,6 @@ code {
   word-wrap();
 }
 
-pre {
-  @extend $code-block;
-  overflow: auto;
-  padding: 10px;
-
-  code {
-    background: none;
-    color: $highlight-foreground;
-    font-size: $table-font-size;
-    padding: 0;
-    text-shadow: none;
-  }
-}
-
 .highlight {
   @extend $code-block;
 
@@ -50,13 +36,22 @@ pre {
   pre {
     border: 0;
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
   }
 
   table {
     border: 0;
     margin: 0;
     width: auto;
+  }
+
+  tr {
+    &:first-child pre {
+      padding-top: 10px;
+    }
+    &:last-child pre {
+      padding-bottom: 10px;
+    }
   }
 
   td {
@@ -67,8 +62,8 @@ pre {
   figcaption {
     background: $code-background;
     color: $highlight-foreground;
-    line-height: 1em;
-    margin: 0;
+    font-size: $table-font-size;
+    line-height: 1.2;
     padding: .5em;
     clearfix();
 
@@ -88,6 +83,7 @@ pre {
     padding-left: 10px;
     padding-right: 10px;
     text-align: right;
+    disable-user-select();
   }
 
   .code pre {
@@ -95,10 +91,6 @@ pre {
     padding-left: 10px;
     width: 100%;
   }
-}
-
-.gutter {
-  disable-user-select();
 }
 
 .gist table {
@@ -110,6 +102,17 @@ pre {
 }
 
 pre {
+  @extend $code-block;
+  overflow: auto;
+  padding: 10px;
+
+  code {
+    background: none;
+    color: $highlight-foreground;
+    font-size: $table-font-size;
+    padding: 0;
+    text-shadow: none;
+  }
   // For diff highlight
   .deletion {
     background: $highlight-deletion;
