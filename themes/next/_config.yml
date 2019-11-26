@@ -170,7 +170,7 @@ sidebar:
 avatar:
   # Replace the default image and set the url here.
   url: https://avatars2.githubusercontent.com/u/16345433?s=40&v=4
-  # If true, the avatar would be dispalyed in circle.
+  # If true, the avatar will be dispalyed in circle.
   rounded: false
   # If true, the avatar will be rotated with the cursor.
   rotated: false
@@ -304,6 +304,10 @@ post_edit:
   enable: false
   url: https://github.com/user-name/repo-name/tree/branch-name/subdirectory-name # Link for view source
   #url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name # Link for fork & edit
+
+# Show previous post and next post in post footer if exists
+# Available values: left | right | false
+post_navigation: left
 
 
 # ---------------------------------------------------------------
@@ -700,12 +704,6 @@ growingio_analytics: 3-wJ4Vc1s0T2ob2EFT0ejNdA0SF6iG4LD5qSwm8uW6A
 
 # CNZZ count
 cnzz_siteid:
-
-# Tencent analytics
-tencent_analytics: # <app_id>
-
-# Tencent MTA
-tencent_mta: # <app_id>
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
