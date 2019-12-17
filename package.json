@@ -30,16 +30,6 @@
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "hexo-symbols-count-time": "^0.7.0",
-    "live2d-widget-model-hijiki": "^1.0.5",
-    "to": "^0.2.9",
-    "update": "^0.7.4"
-  },
-  "devDependencies": {
-    "cz-conventional-changelog": "^3.0.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "live2d-widget-model-hijiki": "^1.0.5"
   }
 }
