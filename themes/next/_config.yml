@@ -548,7 +548,7 @@ lazyload: true
 
 # Pangu Support
 # For more information: https://github.com/vinta/pangu.js
-pangu: false
+pangu: true
 
 # Quicklink Support
 # For more information: https://github.com/GoogleChromeLabs/quicklink
@@ -963,7 +963,7 @@ vendors:
   # Pangu
   # pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
   # pangu: //cdnjs.cloudflare.com/ajax/libs/pangu/4.0.7/pangu.min.js
-  pangu:
+  pangu: //cdn.jsdelivr.net/npm/pangu@4/dist/browser/pangu.min.js
 
   # Quicklink
   # quicklink: //cdn.jsdelivr.net/npm/quicklink@1/dist/quicklink.umd.js
