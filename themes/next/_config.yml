@@ -721,7 +721,7 @@ leancloud_visitors:
 # Visit https://console.firebase.google.com/u/0/ to get apiKey and projectId.
 # Visit https://firebase.google.com/docs/firestore/ to get more information about firestore.
 firestore:
-  enable: true
+  enable: false
   collection: articles # Required, a string collection name to access firestore database
   apiKey: AIzaSyBGT3Drz0OIK9aKH4EhqnGuL-tKi1ILNmY
   projectId: zhangfei-s-blog
