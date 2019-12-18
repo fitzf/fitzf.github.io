@@ -4,11 +4,15 @@ node_js: lts/*
 
 cache: npm
 
-before_script:
-  - npm install hexo-cli gulp -g
+before_install:
+  - npm i hexo-cli gulp -g
+
+install: npm i
 
 script:
-  - hexo clean && hexo g && gulp
+  - hexo clean
+  - hexo g
+  - gulp
 
 # after_script:
 #   - cd ./public
