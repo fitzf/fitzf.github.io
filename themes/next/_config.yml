@@ -703,7 +703,7 @@ baidu_analytics: adebe72cfd8e363da0f54dbd3032630d
 growingio_analytics: 3-wJ4Vc1s0T2ob2EFT0ejNdA0SF6iG4LD5qSwm8uW6A
 
 # CNZZ count
-cnzz_siteid:
+cnzz_siteid: 1278303802
 
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
@@ -876,7 +876,7 @@ pace:
 three:
   enable: true
   three_waves: false
-  canvas_lines: false
+  canvas_lines: true
   canvas_sphere: false
 
 # Canvas-nest
