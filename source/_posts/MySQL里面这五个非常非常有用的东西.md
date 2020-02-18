@@ -1,8 +1,9 @@
 ---
 title: MySQL里面这五个非常非常有用的东西
-date: 2017-04-08 18:02:04
 tags: Mysql
 categories: Essay
+abbrlink: 59847b0b
+date: 2017-04-08 18:02:04
 ---
 MySQL是非常流行的关系型数据库，虽然拥有的SQL语法大部分是符合ANSI SQL标准的，但是它自身还是携带了很多优秀的、私有的语句和指示符，今天我们就来分析一下。
 ### EXPLAIN

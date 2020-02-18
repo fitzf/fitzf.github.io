@@ -1,10 +1,11 @@
 ---
-title: Java 线上 CPU100% 排查思路
+title: Java线上CPU占用过高问题排查思路
 author: Zhang Fei
 tags:
   - Java
 categories:
   - Collection
+abbrlink: 36f079e3
 date: 2019-10-31 17:09:00
 ---
 #### 一、根据 Java 进程 ID，用 `ps` 或 `top` 命令查询出 CPU 占用率高的线程

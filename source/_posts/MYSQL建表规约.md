@@ -1,8 +1,9 @@
 ---
 title: MYSQL建表规约
-date: 2017-04-08 18:05:29
 tags: Mysql
 categories: Essay
+abbrlink: e0fecff9
+date: 2017-04-08 18:05:29
 ---
 
 【强制】表达是与否概念的字段，必须使用 is_xxx 的方式命名，数据类型是 unsigned tinyint（ 1 表示是，0 表示否），此规则同样适用于 odps 建表。

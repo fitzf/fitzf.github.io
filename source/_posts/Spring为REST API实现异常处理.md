@@ -1,6 +1,5 @@
 ---
 title: Spring为REST API实现异常处理
-date: 2017-08-13 00:30:24
 tags:
   - Java
   - Spring
@@ -8,6 +7,8 @@ tags:
   - Rest API
 categories:
   - Collection
+abbrlink: ca1a43ab
+date: 2017-08-13 00:30:24
 ---
 > 在Spring 3.2之前，在Spring MVC应用程序中处理异常的两种主要方法是：HandlerExceptionResolver或@ExceptionHandler注释。这两个都有一些明显的缺点。3.2之后，我们现在有了新的@ControllerAdvice注释来解决前面两个解决方案的局限性。所有这些都有一个共同点 - 他们处理分离问题非常好。应用程序可以正常抛出异常以指示某种类型的异常 - 然后将单独处理异常。
 

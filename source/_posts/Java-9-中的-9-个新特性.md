@@ -3,7 +3,9 @@ title: Java 9 中的 9 个新特性
 author: Zhang Fei
 tags:
   - Java
-categories: [Essay]
+categories:
+  - Essay
+abbrlink: d1d33620
 date: 2017-05-16 22:52:00
 ---
 # Java 9 中的 9 个新特性

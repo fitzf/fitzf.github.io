@@ -22,10 +22,6 @@
   <meta name="msapplication-config" content="{{ url_for(theme.favicon.ms_browserconfig) }}">
 {%- endif %}
 
-{%- if rss %}
-  <link rel="alternate" href="{{ url_for(rss) }}" title="{{ title }}" type="application/atom+xml">
-{%- endif %}
-
 {%- if theme.disable_baidu_transformation %}
   <meta http-equiv="Cache-Control" content="no-transform">
   <meta http-equiv="Cache-Control" content="no-siteapp">
@@ -62,33 +58,4 @@
   <script src="{{ pace_js_uri }}"></script>
 {%- endif %}
 
-{# Export some Hexo Configurations to Front-End #}
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('{{ config.url }}').hostname,
-    root: '{{ config.root }}',
-    scheme: '{{ theme.scheme }}',
-    version: '{{ next_version }}',
-    exturl: {{ theme.exturl }},
-    sidebar: {{ theme.sidebar | json }},
-    copycode: {{ theme.codeblock.copy_button | json }},
-    back2top: {{ theme.back2top | json }},
-    bookmark: {{ theme.bookmark | json }},
-    fancybox: {{ theme.fancybox }},
-    mediumzoom: {{ theme.mediumzoom }},
-    lazyload: {{ theme.lazyload }},
-    pangu: {{ theme.pangu }},
-    algolia: {
-      appID: '{{ config.algolia.applicationID }}',
-      apiKey: '{{ config.algolia.apiKey }}',
-      indexName: '{{ config.algolia.indexName }}',
-      hits: {{ theme.algolia_search.hits | json }},
-      labels: {{ theme.algolia_search.labels | json }}
-    },
-    localsearch: {{ theme.local_search | json }},
-    path: '{{ config.search.path }}',
-    motion: {{ theme.motion | json }},
-    sidebarPadding: 40
-  };
-</script>
+{{ next_config() }}

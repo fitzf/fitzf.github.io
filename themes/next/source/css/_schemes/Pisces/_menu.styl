@@ -1,10 +1,8 @@
 .site-nav-toggle {
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-
   +tablet() {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .toggle .toggle-line {
@@ -12,9 +10,13 @@
   }
 }
 
-.site-nav {
-  border-top: none;
+.site-nav-right {
+  +tablet() {
+    display: block;
+  }
+}
 
+.site-nav {
   +tablet() {
     display: none;
   }

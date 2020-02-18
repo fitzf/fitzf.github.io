@@ -6,7 +6,7 @@
 title: Zhangfei's Blog
 subtitle: Quick notes
 description: 胡编一通，乱写一气
-keywords:
+keywords: "张飞, ZhangFei, 技术, Java, Docker, Kotlin, Go, K8s, Groovy, Spring, Spring Boot, Dubbo, Middleware, Python"
 author: Zhang Fei
 language: zh-CN
 timezone: Asia/Shanghai
@@ -15,7 +15,8 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://zhangfei.men
 root: /
-permalink: :year/:month/:day/:title/
+# permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -96,6 +97,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+# theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -159,3 +161,17 @@ live2d:
     show: true
   react:
     opacity: 0.7
+
+# hexo-excerpt
+# https://github.com/chekun/hexo-excerpt
+excerpt:
+  depth: 5
+  excerpt_excludes: []
+  more_excludes: []
+  hideWholePostExcerpts: true
+
+# abbrlink config
+# https://github.com/rozbo/hexo-abbrlink
+abbrlink:
+  alg: crc32  #support crc16(default) and crc32
+  rep: hex    #support dec(default) and hex

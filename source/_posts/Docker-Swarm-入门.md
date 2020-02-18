@@ -1,12 +1,13 @@
 ---
 title: Docker Swarm 入门
 author: Zhang Fei
-date: 2017-07-06 23:23:31
 tags:
   - Docker
   - Docker Swarm
 categories:
   - Collection
+abbrlink: 18246ef3
+date: 2017-07-06 23:23:31
 ---
 > Swarm 在 Docker 1.12 版本之前属于一个独立的项目，在 Docker 1.12 版本发布之后，该项目合并到了 Docker 中，成为 Docker 的一个子命令。目前，Swarm 是 Docker 社区提供的唯一一个原生支持 Docker 集群管理的工具。它可以把多个 Docker 主机组成的系统转换为单一的虚拟 Docker 主机，使得容器可以组成跨主机的子网网络。
 

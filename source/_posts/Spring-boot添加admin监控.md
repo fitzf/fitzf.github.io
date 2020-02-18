@@ -7,6 +7,7 @@ tags:
   - Monitor
 categories:
   - Collection
+abbrlink: 5ec24585
 date: 2017-08-17 22:46:57
 ---
 # 什么是Spring Boot Admin？

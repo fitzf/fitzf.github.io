@@ -60,16 +60,8 @@
 </div>
 {%- endif %}
 
-{%- if rss %}
-  <div class="feed-link motion-element">
-    <a href="{{ url_for(rss) }}" rel="alternate">
-      <i class="fa fa-rss"></i>RSS
-    </a>
-  </div>
-{%- endif %}
-
 {%- if theme.chat.enable and theme.chat.service !== '' %}
-  <div class="chat motion-element">
+  <div class="sidebar-button motion-element">
   {%- if theme.chat.service == 'chatra' and theme.chatra.enable %}
     <a onclick="Chatra('openChat', true)">
   {%- endif %}
@@ -105,13 +97,6 @@
 
 {%- if theme.creative_commons.license and theme.creative_commons.sidebar %}
   <div class="cc-license motion-element" itemprop="license">
-  {%- set ccLanguage = theme.creative_commons.language %}
-  {%- if theme.creative_commons.license === 'zero' %}
-    {%- set ccType = 'publicdomain/zero/1.0/' + ccLanguage %}
-  {% else %}
-    {%- set ccType = 'licenses/' + theme.creative_commons.license + '/4.0/' + ccLanguage %}
-  {%- endif %}
-  {%- set ccURL = 'https://creativecommons.org/' + ccType %}
   {%- set ccImage = '<img src="' + url_for(theme.images + '/cc-' + theme.creative_commons.license + '.svg') + '" alt="Creative Commons">' %}
     {{ next_url(ccURL, ccImage, {class: 'cc-opacity'}) }}
   </div>

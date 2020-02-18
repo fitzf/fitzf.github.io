@@ -6,6 +6,7 @@ tags:
   - Spring Boot
 categories:
   - Collection
+abbrlink: eb48025f
 date: 2017-08-09 23:15:52
 ---
 ![upload successful](/images/pasted-43.png)

@@ -1,8 +1,9 @@
 ---
 title: Sequences in MySQL
-date: 2017-03-24 13:00:42
 tags: Mysql
 categories: Essay
+abbrlink: d063c7dd
+date: 2017-03-24 13:00:42
 ---
 
 Sequences in MySQL

@@ -1,8 +1,9 @@
 ---
 title: JAVA不借助中间变量交换2个变量的值
-date: 2017-04-09 13:29:50
 tags: Java
 categories: Essay
+abbrlink: f07e5cea
+date: 2017-04-09 13:29:50
 ---
 ```java
 public static void main(String[] args) {

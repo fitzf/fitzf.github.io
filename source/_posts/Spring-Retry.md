@@ -1,12 +1,13 @@
 ---
 title: Spring Retry
-date: 2017-08-14 23:50:34
 tags:
   - Java
   - Spring
   - Spring Boot
 categories:
   - Collection
+abbrlink: 69b13214
+date: 2017-08-14 23:50:34
 ---
 ## 使用场景:
 

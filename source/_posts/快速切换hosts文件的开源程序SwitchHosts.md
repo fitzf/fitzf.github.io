@@ -1,13 +1,14 @@
 ---
 title: 快速切换hosts文件的开源程序SwitchHosts
 author: Zhang Fei
-date: 2017-07-07 22:44:50
 tags:
   - Hosts
   - Software
 categories:
   - Collection
   - Software
+abbrlink: d04e924f
+date: 2017-07-07 22:44:50
 ---
 SwitchHosts 是一款用于快速切换 hosts 文件的开源小程序，基于 MIT 协议开源。拥有Windows版, Linux版和Mac OS 版。基于 Electron 开发，同时使用了 React、Ant Design 以及 CodeMirror 等框架/库。需要 Node.js 环境。
 

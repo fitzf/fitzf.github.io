@@ -1,8 +1,9 @@
 ---
 title: Docker可视化管理工具Shipyard安装与配置
-date: 2017-04-11 19:10:20
 tags: Docker
 categories: Collection
+abbrlink: 2a39a568
+date: 2017-04-11 19:10:20
 ---
 > **文章来源： [Shipyard Automated Deployment](https://shipyard-project.com/docs/deploy/automated/)**
 

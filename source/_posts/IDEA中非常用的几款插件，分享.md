@@ -1,8 +1,12 @@
 ---
 title: IDEA中非常用的几款插件，分享
-date: 2017-04-08 17:43:52
-tags: [IDE, JetBrains, IntelliJ IDEA]
+tags:
+  - IDE
+  - JetBrains
+  - IntelliJ IDEA
 categories: Collection
+abbrlink: 2dd646f0
+date: 2017-04-08 17:43:52
 ---
 插件名称 | 插件介绍 | 官网地址
 --------|---------|-------

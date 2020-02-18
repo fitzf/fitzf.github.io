@@ -38,10 +38,6 @@ post:
     license_title: Copyright Notice
     license_content: "All articles in this blog are licensed under %s unless stating additionally."
 
-page:
-  totally: Totally
-  tags: tags
-
 footer:
   powered: "Powered by %s"
   theme: Theme
@@ -66,7 +62,6 @@ counter:
 
 state:
   posts: posts
-  pages: pages
   tags: tags
   categories: categories
 
@@ -92,7 +87,11 @@ reward:
   donate: Donate
   wechatpay: WeChat Pay
   alipay: Alipay
+  paypal: PayPal
   bitcoin: Bitcoin
+
+follow_me:
+  welcome: Welcome to my other publishing channels
 
 accessibility:
   nav_toggle: Toggle navigation bar

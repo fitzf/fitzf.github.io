@@ -1,16 +1,13 @@
 .site-nav-toggle {
   display: none;
-  left: 10px;
-  position: absolute;
 
   +mobile() {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .toggle {
-    background: transparent;
-    border: 0;
-    margin-top: 2px;
     padding: 10px;
     width: 22px;
 
@@ -21,15 +18,21 @@
   }
 }
 
+.site-nav-right {
+  display: none;
+  width: 42px;
+
+  +mobile() {
+    display: block;
+  }
+}
+
 .site-nav {
   display: block;
 
   +mobile() {
-    border-top: 1px solid $gray-lighter;
     clear: both;
     display: none;
-    margin: 0 -10px;
-    padding: 0 10px;
   }
 
   &.site-nav-on {

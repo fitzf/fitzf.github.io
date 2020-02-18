@@ -1,8 +1,9 @@
 ---
 title: Java开源项目
-date: 2017-05-04 23:53:43
 tags: Java
 categories: Collection
+abbrlink: 9d0b5148
+date: 2017-05-04 23:53:43
 ---
 > 原文地址：http://blog.longjiazuo.com/archives/2625
 

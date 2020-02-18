@@ -1,8 +1,9 @@
 ---
 title: Java动态代理与Cglib库
-date: 2017-03-22 18:20:58
 tags: Java
 categories: Essay
+abbrlink: 3a5f5aec
+date: 2017-03-22 18:20:58
 ---
 
 JDK动态代理

@@ -1,11 +1,12 @@
 ---
 title: 基于Docker的CI/CD流水线实践
 author: Zhang Fei
-date: 2017-07-07 22:56:38
 tags:
-  -  DevOps
+  - DevOps
 categories:
   - Collection
+abbrlink: bdb4418d
+date: 2017-07-07 22:56:38
 ---
 # 概要
 

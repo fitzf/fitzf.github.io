@@ -1,8 +1,9 @@
 ---
 title: Git Commit message 的写法规范之《Angular 规范》
-date: 2017-04-11 20:47:40
 tags: Git
 categories: Essay
+abbrlink: 72195e4f
+date: 2017-04-11 20:47:40
 ---
  > 目前，社区有多种 Commit message 的写法规范。本文介绍[《Angular 规范》](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)，这是目前使用最广的写法，比较合理和系统化，并且有配套的工具。 
 

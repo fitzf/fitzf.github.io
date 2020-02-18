@@ -1,8 +1,10 @@
 ---
 title: 怎样在复杂代码中找bug？
-tags: [Coding]
+tags:
+  - Coding
 categories:
   - Essay
+abbrlink: c86f0e35
 date: 2017-04-20 22:32:00
 ---
 # 避免错误

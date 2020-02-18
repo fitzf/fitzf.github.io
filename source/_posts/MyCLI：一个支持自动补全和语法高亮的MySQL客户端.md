@@ -4,6 +4,7 @@ tags:
   - Mysql
   - Shell
 categories: Collection
+abbrlink: 2f03f1fe
 date: 2017-06-07 17:24:06
 ---
 ![upload successful](/images/pasted-19.png)

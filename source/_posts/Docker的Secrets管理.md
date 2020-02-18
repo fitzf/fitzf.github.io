@@ -1,9 +1,11 @@
 ---
 title: Docker的Secrets管理
-date: 2017-05-18 20:41:58
-tags: 
+tags:
   - Docker
-categories: [Essay]
+categories:
+  - Essay
+abbrlink: b8062d72
+date: 2017-05-18 20:41:58
 ---
 我相信当我们意识到重要且敏感的访问信息已经暴露到公共网络上，并可能使您的微服务无条件被访问。随着我们依赖于的开发出来的服务化的量不断增加， 这时跟踪敏感细节的数量也有所增加。为了应对这个问题，在“secrets managemen”领域出现了工具。
 
