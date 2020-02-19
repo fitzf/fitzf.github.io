@@ -281,9 +281,9 @@ reward:
 # Usage: `Key: permalink || icon` (Font Awesome)
 follow_me:
   #Twitter: https://twitter.com/username || twitter
-  #Telegram: https://t.me/channel_name || telegram
+  Telegram: https://t.me/Eason || telegram
   #WeChat: /images/wechat_channel.jpg || wechat
-  #RSS: /atom.xml || rss
+  RSS: /atom.xml || rss
 
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
@@ -375,9 +375,9 @@ codeblock:
 back2top:
   enable: true
   # Back to top in sidebar.
-  sidebar: false
+  sidebar: true
   # Scroll percent label in b2t button.
-  scrollpercent: false
+  scrollpercent: true
 
 # Reading progress bar
 reading_progress:
@@ -704,7 +704,7 @@ cnzz_siteid: 1278303802
 # AppID and AppKey are recommended to be the same as valine's for counter compatibility.
 # Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: 4lGJ1v9lzpF1QOO20kGGoKpB-gzGzoHsz # <app_id>
   app_key: TBNkObI72zlxA5z1ToT6xtu8 # <app_key>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security

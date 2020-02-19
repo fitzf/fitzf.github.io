@@ -17,9 +17,9 @@ date: 2017-08-14 23:50:34
 
 ```xml
 <dependency>
-    <groupId>org.springframework.retry</groupId>
-    <artifactId>spring-retry</artifactId>
-    <version>1.1.5.RELEASE</version>
+  <groupId>org.springframework.retry</groupId>
+  <artifactId>spring-retry</artifactId>
+  <version>1.2.5.RELEASE</version>
 </dependency>
 ```
 
