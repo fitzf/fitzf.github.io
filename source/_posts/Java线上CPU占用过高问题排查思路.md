@@ -2,9 +2,14 @@
 title: Java线上CPU占用过高问题排查思路
 author: Zhang Fei
 tags:
+  - OOM
+  - Full GC
+  - JVM command
   - Java
+  - Tool
 categories:
-  - Collection
+  - 问题排查
+  - Java
 abbrlink: 36f079e3
 date: 2019-10-31 17:09:00
 ---

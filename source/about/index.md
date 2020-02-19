@@ -1,6 +1,7 @@
 ---
 title: About
 date: 2017-07-12 00:42:54
+comments: false
 ---
 ![I'm a coder](/images/timg.jpeg)
 

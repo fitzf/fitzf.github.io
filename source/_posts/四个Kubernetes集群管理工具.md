@@ -5,7 +5,7 @@ tags:
   - Kubernetes
   - Docker
 categories:
-  - Essay
+  - 工具分享
 abbrlink: 4fa5d2db
 date: 2017-05-18 20:33:40
 ---

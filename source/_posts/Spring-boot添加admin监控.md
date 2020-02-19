@@ -10,13 +10,13 @@ categories:
 abbrlink: 5ec24585
 date: 2017-08-17 22:46:57
 ---
-# 什么是Spring Boot Admin？
+## 什么是Spring Boot Admin？
 
 Spring Boot Admin是一个用于管理和监视Spring Boot应用程序的简单应用程序。应用程序通过我们的Spring Boot Admin Client（通过http）注册，或者使用Spring Cloud（例如Eureka）进行注册。
 
-# 入门
+## 入门
 
-## 设置Admin Server服务
+### 设置Admin Server服务
 
 - 添加Spring Boot Admin Server 和 UI依赖:
 
@@ -46,9 +46,9 @@ public class SpringBootAdminApplication {
 }
 ```
 
-## 注册客户端应用
+### 注册客户端应用
 
-### Spring-boot-admin-starter-client
+#### Spring-boot-admin-starter-client
 
 - 添加Spring-boot-admin-starter-client依赖:
 
@@ -66,7 +66,7 @@ public class SpringBootAdminApplication {
 spring.boot.admin.url: http://localhost:8080
 ```
 
-### 使用 Spring Cloud Discovery 注册
+#### 使用 Spring Cloud Discovery 注册
 
 - 添加Spring-cloud-starter-eureka依赖:
 
@@ -103,7 +103,7 @@ eureka:
       defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
 ```
 
-# 监控效果
+## 监控效果
 
 浏览器访问http://localhost:8080
 
@@ -113,7 +113,7 @@ eureka:
 
 ![upload successful](/images/pasted-46.png)
 
-## 更多
+### 更多
 
 > [Github](https://github.com/codecentric/spring-boot-admin)
 > [更多功能和官方文档](https://codecentric.github.io/spring-boot-admin/1.5.3/)
