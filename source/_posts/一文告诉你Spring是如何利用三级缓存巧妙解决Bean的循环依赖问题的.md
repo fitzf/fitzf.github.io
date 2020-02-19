@@ -12,7 +12,7 @@ date: 2020-02-19 14:43:09
 ## 前言
 
 **循环依赖：就是N个类循环(嵌套)引用**。通俗的讲就是N个Bean互相引用对方，最终形成`闭环`。用一副经典的图示可以表示成这样（A、B、C都代表对象，虚线代表引用关系）：
-![](https://cdn.nlark.com/yuque/0/2019/png/86832/1577274446968-bae2d662-aa33-4130-a887-dc1d16860cf6.png#align=left&display=inline&height=224&originHeight=224&originWidth=274&size=0&status=done&style=none&width=274)
+![upload successful](/images/pasted-50.png)
 > 注意：其实可以N=1，也就是极限情况的循环依赖：`自己依赖自己`
 > 另需注意：这里指的循环引用不是方法之间的循环调用，**而是对象的相互依赖关系**。（方法之间循环调用若有出口也是能够正常work的）
 
@@ -72,7 +72,7 @@ public class BServiceImpl implements BService {
 ## Spring中`三大循环依赖场景`演示
 
 在Spring环境中，因为我们的Bean的实例化、初始化都是交给了容器，因此它的循环依赖主要表现为下面三种场景。为了方便演示，我准备了如下两个类：
-![](https://cdn.nlark.com/yuque/0/2019/png/86832/1577274446900-f96b7457-cb5e-412c-b641-72a79c26ff30.png#align=left&display=inline&height=67&originHeight=67&originWidth=214&size=0&status=done&style=none&width=214)
+![upload successful](/images/pasted-51.png)
 
 ### 1、构造器注入循环依赖
 
@@ -189,7 +189,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 ### Spring创建Bean的流程
 
 首先需要了解是Spring它创建Bean的流程，我把它的大致调用栈绘图如下：
-![](https://cdn.nlark.com/yuque/0/2019/png/86832/1577274446865-81e5db73-b299-49de-b190-3962d482b00e.png#align=left&display=inline&height=339&originHeight=470&originWidth=970&size=0&status=done&style=none&width=700)
+![upload successful](/images/pasted-52.png)
 对Bean的创建最为核心三个方法解释如下：
 
 - `createBeanInstance`：例化，其实也就是调用对象的**构造方法**实例化对象
@@ -554,7 +554,7 @@ protected Object doCreateBean(){
 ```
 
 由于关键代码部分的步骤不太好拆分，为了更具象表达，那么使用下面一副图示帮助小伙伴们理解：
-![](https://cdn.nlark.com/yuque/0/2019/png/86832/1577274446817-21c8d103-0f8e-4681-a1d8-f46beca47886.png#align=left&display=inline&height=396&originHeight=873&originWidth=1545&size=0&status=done&style=none&width=700)
+![upload successful](/images/pasted-53.png)
 
 **最后的最后，由于我太暖心了_，再来个纯文字版的总结。**
  依旧以上面`A`、`B`类使用属性`field`注入循环依赖的例子为例，对整个流程做文字步骤总结如下：
