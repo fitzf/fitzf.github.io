@@ -5,7 +5,7 @@ categories: Essay
 abbrlink: 72195e4f
 date: 2017-04-11 20:47:40
 ---
- > 目前，社区有多种 Commit message 的写法规范。本文介绍[《Angular 规范》](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)，这是目前使用最广的写法，比较合理和系统化，并且有配套的工具。 
+ > 目前，社区有多种 Commit message 的写法规范。本文介绍[《Angular 规范》](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.greljkmo14y0)，这是目前使用最广的写法，比较合理和系统化，并且有配套的工具。
 
 # 一、Commit message 的作用
 
@@ -35,7 +35,7 @@ Change Log 是发布新版本时，用来说明与上一个版本差异的文档
 
 每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。
 
-```
+```text
 <type>(<scope>): <subject>
 // 空一行
 <body>
@@ -78,9 +78,9 @@ subject是 commit 目的的简短描述，不超过50个字符。
 
 Body 部分是对本次 commit 的详细描述，可以分成多行。下面是一个范例。
 
-```
-More detailed explanatory text, if necessary.  Wrap it to 
-about 72 characters or so. 
+```text
+More detailed explanatory text, if necessary.  Wrap it to
+about 72 characters or so.
 
 Further paragraphs come after blank lines.
 
@@ -100,7 +100,7 @@ Footer 部分只用于两种情况。
 
 如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法。
 
-```
+```text
 BREAKING CHANGE: isolate scope bindings definition has changed.
 
     To migrate the code follow the example below:
@@ -124,13 +124,13 @@ BREAKING CHANGE: isolate scope bindings definition has changed.
 
 如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。
 
-```
+```text
 Closes #234
 ```
 
 也可以一次关闭多个 issue 。
 
-```
+```text
 Closes #123, #245, #992
 ```
 
@@ -138,7 +138,7 @@ Closes #123, #245, #992
 
 还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header。
 
-```
+```text
 revert: feat(pencil): add 'graphiteWidth' option
 
 This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
@@ -152,14 +152,14 @@ Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，�
 Commitizen是一个撰写合格 Commit message 的工具。
 安装命令如下。
 
-```
-$ npm install -g commitizen
+```bash
+npm install -g commitizen
 ```
 
 然后，在项目目录里，运行下面的命令，使其支持 Angular 的 Commit message 格式。
 
-```
-$ commitizen init cz-conventional-changelog --save --save-exact
+```bash
+commitizen init cz-conventional-changelog --save --save-exact
 ```
 
 以后，凡是用到git commit命令，一律改为使用git cz。这时，就会出现选项，用来生成符合格式的 Commit message。
@@ -170,7 +170,7 @@ validate-commit-msg 用于检查 Node 项目的 Commit message 是否符合格�
 它的安装是手动的。首先，拷贝下面这个JS文件，放入你的代码库。文件名可以取为validate-commit-msg.js。
 接着，把这个脚本加入 Git 的 hook。下面是在package.json里面使用 ghooks，把这个脚本加为commit-msg时运行。
 
-```
+```json
   "config": {
     "ghooks": {
       "commit-msg": "./validate-commit-msg.js"
@@ -180,9 +180,9 @@ validate-commit-msg 用于检查 Node 项目的 Commit message 是否符合格�
 
 然后，每次git commit的时候，这个脚本就会自动检查 Commit message 是否合格。如果不合格，就会报错。
 
-```
-$ git add -A 
-$ git commit -m "edit markdown" 
+```bash
+git add -A
+git commit -m "edit markdown"
 INVALID COMMIT MSG: does not match "<type>(<scope>): <subject>" ! was: edit markdown
 ```
 
@@ -191,7 +191,7 @@ INVALID COMMIT MSG: does not match "<type>(<scope>): <subject>" ! was: edit mark
 如果你的所有 Commit 都符合 Angular 格式，那么发布新版本时， Change log 就可以用脚本自动生成（例1，例2，例3）。
 生成的文档包括以下三个部分。
 
-```
+```text
 New features
 Bug fixes
 Breaking changes.
@@ -200,22 +200,22 @@ Breaking changes.
 每个部分都会罗列相关的 commit ，并且有指向这些 commit 的链接。当然，生成的文档允许手动修改，所以发布前，你还可以添加其他内容。
 conventional-changelog 就是生成 Change log 的工具，运行下面的命令即可。
 
-```
-$ npm install -g conventional-changelog
-$ cd my-project
-$ conventional-changelog -p angular -i CHANGELOG.md -w
+```bash
+npm install -g conventional-changelog
+cd my-project
+conventional-changelog -p angular -i CHANGELOG.md -w
 ```
 
 上面命令不会覆盖以前的 Change log，只会在CHANGELOG.md的头部加上自从上次发布以来的变动。
 如果你想生成所有发布的 Change log，要改为运行下面的命令。
 
-```
-$ conventional-changelog -p angular -i CHANGELOG.md -w -r 0
+```bash
+conventional-changelog -p angular -i CHANGELOG.md -w -r 0
 ```
 
 为了方便使用，可以将其写入package.json的scripts字段。
 
-```
+```json
 {
   "scripts": {
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0"
@@ -225,12 +225,8 @@ $ conventional-changelog -p angular -i CHANGELOG.md -w -r 0
 
 以后，直接运行下面的命令即可。
 
+```bash
+npm run changelog
 ```
-$ npm run changelog
-```
-
----
 
 > 转自http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html
-
----

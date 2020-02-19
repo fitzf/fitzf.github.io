@@ -14,7 +14,7 @@ public static void main(String[] args) {
     b=a-b;
     a=a-b;
     System.out.println("a="+a+",b="+b);
-    
+
     /*方法二利用位运算交换，效率很高*/
     int aa=3;
     int bb=4;

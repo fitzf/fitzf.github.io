@@ -1,5 +1,5 @@
 ---
-title: 'Spring 中使用 logback打印日志，替换其他日志如log4j,commons-logging'
+title: 'Spring中使用logback打印日志，替换其他日志如log4j,commons-logging'
 tags:
   - Java
   - Spring
@@ -23,7 +23,7 @@ date: 2017-03-21 19:42:32
 
 #### 添加依赖
 
-```java
+```xml
 <dependency>  
     <groupId>ch.qos.logback</groupId>  
     <artifactId>logback-classic</artifactId>  
@@ -56,6 +56,7 @@ date: 2017-03-21 19:42:32
     <version>1.7.12</version>  
 </dependency>  
 ```
+
 注意：删除原有的log4j.jar。
 如上所示是集成所需要的依赖，其中：
 第一个logback-classic包含了logback本身所需的slf4j-api.jar、logback-core.jar及logback-classsic.jar
@@ -72,18 +73,20 @@ logback的详细用法及其xml文件的相关语法，可参见它的用户向�
 #### 配置web.xml
 
 与log4j类似，logback集成到Spring MVC项目中，也需要在web.xml中进行配置，同样也是配置一个config location和一个config listener，如下所示：
-```java
+
+```xml
 <context-param>  
-         <param-name>logbackConfigLocation</param-name>  
-         <param-value>classpath:logback.xml</param-value>  
+  <param-name>logbackConfigLocation</param-name>  
+  <param-value>classpath:logback.xml</param-value>  
 </context-param>  
 <listener>  
-         <listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>  
+  <listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>  
 </listener>  
 ```
+
 其中LogbackConfigListener由前述的logback-ext-spring依赖提供，若不依赖它则找不到这个listener类
 
 ### 其它
 
 从上面可以看出，slf4j-log4j和slf4j-logback集成到Spring MVC（或推广到其它Java Web项目中）的步骤大体是相同的。集成完毕后，就可以通过slf4j提供的API隐藏掉logback（或log4j）的具体实现，直接进行日志处理了
-使用slf4j-api的时候，需要注意的是：slf4j采用了单例模式，项目中创建的每一个Logger实例都会按你传入的name（传入的Class<?>实例也会被转换成String型的name）保存到一个静态的ConcurrentHashMap中；因此只要name（或Class<?>实例）相同，每次返回的实际上都是同一个Logger实例。因此完全没必要把Logger实例作为常量或静态成员，随用随取即可。实际上，其作者也不建议那么做
+使用slf4j-api的时候，需要注意的是：slf4j采用了单例模式，项目中创建的每一个Logger实例都会按你传入的name（传入的Class<?>实例也会被转换成String型的name）保存到一个静态的ConcurrentHashMap中；因此只要name（或Class<?>实例）相同，每次返回的实际上都是同一个Logger实例。因此完全没必要把Logger实例作为常量或静态成员，随用随取即可。实际上，其作者也不建议那么做。

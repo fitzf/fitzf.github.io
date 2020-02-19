@@ -11,17 +11,16 @@ jstl-1.2.jar
 
 ```java
   public static boolean endsWith(String input, String substring) {
-    if (input == null) 
+    if (input == null)
       input = "";
-    if (substring == null) 
+    if (substring == null)
       substring = "";
     int index = input.indexOf(substring); // should be indexOf应该是lastIndexOf 才对
-    if (index == -1) 
+    if (index == -1)
       return false;
-    if ((index == 0) && (substring.length() == 0)) 
+    if ((index == 0) && (substring.length() == 0))
       return true;
     return index == input.length() - substring.length();
   }
   
 ```
-

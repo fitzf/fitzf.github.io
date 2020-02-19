@@ -84,12 +84,14 @@ jmap -dump:live,format=b,file=problem.bin <pid>
 ![upload successful](/images/pasted-49.png)
 
 主要有以下两种原因：
+
 1. 代码中一次获取了大量的对象，导致内存溢出
 2. 内存占用不高，但是 Full GC 次数还是比较多，此时可能是显示的 `System.gc()` 调用导致 GC 次数过多，这可以通过添加 `-XX:+DisableExplicitGC` 来禁用JVM对显示GC的响应
 
 #### 总结
 
 通过 `ps` 或 `top` 命令找出 CPU 过高的线程，将其线程 ID 转换为十六进制，然后在 `jstack` 日志中查看该线程信息，分为以下两种情况：
+
 1. 如果是正常的用户线程，则通过该线程的堆栈信息查看其具体是在哪处用户代码处运行比较消耗 CPU
 2. 如果该线程是 **VM Thread** 则通过 `jstat -gcutil <pid> <period> <times>` 命令监控当前系统的 GC 状况，然后通过 `jmap dump:format=b,file=<filepath> <pid>` 导出系统当前的内存数据，导出之后将内存情况放到 eclipse 的 mat 工具中进行分析即可得出内存中主要是什么对象比较消耗内存，进而可以处理相关代码
 

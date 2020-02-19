@@ -49,11 +49,9 @@ PRIMARY KEY (id)
 );
 CREATE SEQUENCE MovieSeq;
 
-
 INSERT INTO Movie (id,name,released) VALUES (MovieSeq.NEXTVAL,'Gladiator',2000);
 
 You can within Oracle use a Before Insert trigger to simulate handling of the MySQL Insert syntax. Note: Within Oracle you will require a SEQUENCE per table and a TRIGGER per table. Oracle supports multiple triggers of the same type per table (not sure if MySQL supports this).
-
 
  CREATE OR REPLACE TRIGGER BRI_MOVIE_TRG
 BEFORE INSERT ON Movie
@@ -63,7 +61,6 @@ BEGIN
 END BRI_MOVIE_TRG;
 .
 RUN;
-
 
 INSERT INTO Movie (name,released) VALUES ('The Lion King',1994);
 
@@ -79,7 +76,6 @@ SETVAL(‘sequence’,value);
 Wanting something and doing something about it are two different things, so here is what I wiped together to demonstrate a possible implementation. It needs a lot more work in appropiate error handling. transaction management, testing and performance analysis, however it shows the options of one possible implementation.
 
 currval
-
 
  DROP TABLE IF EXISTS sequence;
 CREATE TABLE sequence (
@@ -163,7 +159,6 @@ BEGIN
 END$
 DELIMITER ;
 
-
  mysql> select nextval('MovieSeq');
 +---------------------+
 | nextval('MovieSeq') |
@@ -190,7 +185,6 @@ mysql> select nextval('MovieSeq');
 
 setval
 
-
  DROP FUNCTION IF EXISTS setval;
 DELIMITER $
 CREATE FUNCTION setval (seq_name VARCHAR(50), value INTEGER)
@@ -203,7 +197,6 @@ BEGIN
    RETURN currval(seq_name);
 END$
 DELIMITER ;
-
 
  mysql> select setval('MovieSeq',150);
 +------------------------+
@@ -228,5 +221,3 @@ mysql> select nextval('MovieSeq');
 |                 155 |
 +---------------------+
 1 row in set (0.00 sec)
-
-

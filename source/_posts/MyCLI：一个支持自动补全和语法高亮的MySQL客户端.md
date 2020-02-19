@@ -36,14 +36,14 @@ SELECT * FROM users WHERE <Tab> - 这将简单的显示出列名称。
 在 Debian/Ubuntu 发行版上，你可以很容易的像下面这样使用 apt 命令 来安装 MyCLI 包：
 
 ```sh
-$ sudo apt-get update
-$ sudo apt-get install mycli
+sudo apt-get update
+sudo apt-get install mycli
 ```
 
 同样，在 Fedora 22+ 上也有 MyCLI 的可用包，你可以像下面这样使用 dnf 命令 来安装它：
 
 ```sh
-$ sudo dnf install mycli
+sudo dnf install mycli
 ```
 
 对于其他 Linux 发行版，比如 RHEL/CentOS，你需要使用 Python 的 pip 工具来安装 MyCLI。首先，使用下面的命令来安装 pip：

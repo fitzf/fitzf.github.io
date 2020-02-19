@@ -36,7 +36,7 @@ $ curl -L https://github.com/docker/machine/releases/download/v0.9.0-rc2/docker-
 首先使用 Docker Machine 创建一个虚拟机作为 manger 节点。
 
 ```bash
-$ docker-machine create --driver virtualbox manager1                                    
+$ docker-machine create --driver virtualbox manager1
 Running pre-create checks...
 (manager1) Unable to get the latest Boot2Docker ISO release version:  Get https://api.github.com/repos/boot2docker/boot2docker/releases/latest: dial tcp: lookup api.github.com on [::1]:53: server misbehaving
 Creating machine...
@@ -82,9 +82,9 @@ $ docker-machine create --driver virtualbox worker1
 现在我们有了两个虚拟主机，使用 Machine 的命令可以查看：
 
 ```bash
-$ docker-machine ls                             
+$ docker-machine ls
 NAME     ACTIVE   DRIVER       STATE    URL                        SWARM  DOCKER   ERRORS
-manager1   -      virtualbox   Running  tcp://192.168.99.100:2376         v1.12.3   
+manager1   -      virtualbox   Running  tcp://192.168.99.100:2376         v1.12.3
 worker1    -      virtualbox   Running  tcp://192.168.99.101:2376         v1.12.3
 ```
 
@@ -217,9 +217,9 @@ This node joined a swarm as a manager.
 ```bash
 $ docker-machine ssh manager2 docker node ls
 ID                            HOSTNAME   STATUS   AVAILABILITY   MANAGER STATUS
-16w80jnqy2k30yez4wbbaz1l8     worker1     Ready     Active        
-2gkwhzakejj72n5xoxruet71z     worker2     Ready     Active        
-35kutfyn1ratch55fn7j3fs4x     worker3     Ready     Active        
+16w80jnqy2k30yez4wbbaz1l8     worker1     Ready     Active
+2gkwhzakejj72n5xoxruet71z     worker2     Ready     Active
+35kutfyn1ratch55fn7j3fs4x     worker3     Ready     Active
 a9r21g5iq1u6h31myprfwl8ln *   manager2    Ready     Active        Reachable
 dpo7snxbz2a0dxvx6mf19p35z     manager1    Ready     Active        Leader
 ```
@@ -230,7 +230,7 @@ dpo7snxbz2a0dxvx6mf19p35z     manager1    Ready     Active        Leader
 直接在本地执行加入集群命令：
 
 ```bash
-$ docker swarm join \           
+$ docker swarm join \
     --token SWMTKN-1-3z5rzoey0u6onkvvm58f7vgkser5d7z8sfshlu7s4oz2gztlvj-8tn855hkjdb6usrblo9iu700o \
     192.168.99.100:2377
 This node joined a swarm as a manager.
@@ -241,11 +241,11 @@ This node joined a swarm as a manager.
 ```bash
 $ docker node ls
 ID                          HOSTNAME    STATUS    AVAILABILITY  MANAGER STATUS
-6z2rpk1t4xucffzlr2rpqb8u3    worker3     Ready     Active        
+6z2rpk1t4xucffzlr2rpqb8u3    worker3     Ready     Active
 7qbr0xd747qena4awx8bx101s *  user-pc     Ready     Active         Reachable
 9v93sav79jqrg0c7051rcxxev    manager2    Ready     Active         Reachable
-a1ner3zxj3ubsiw4l3p28wrkj    worker1     Ready     Active        
-a5w7h8j83i11qqi4vlu948mad    worker2     Ready     Active        
+a1ner3zxj3ubsiw4l3p28wrkj    worker1     Ready     Active
+a5w7h8j83i11qqi4vlu948mad    worker2     Ready     Active
 d4h7vuekklpd6189fcudpfy18    manager1    Ready     Active          Leader
 ```
 
@@ -254,9 +254,9 @@ d4h7vuekklpd6189fcudpfy18    manager1    Ready     Active          Leader
 ```bash
 $ docker network ls
 NETWORK ID         NAME            DRIVER          SCOPE
-764ff31881e5        bridge          bridge          local                  
-fbd9a977aa03        host            host            local               
-6p6xlousvsy2        ingress         overlay         swarm            
+764ff31881e5        bridge          bridge          local
+fbd9a977aa03        host            host            local
+6p6xlousvsy2        ingress         overlay         swarm
 e81af24d643d        none            null            local
 ```
 
@@ -281,7 +281,7 @@ e81af24d643d        none                null                local
 首先我们上面创建的节点都是没有镜像的，因此我们要逐一 pull 镜像到节点中，这里我们使用前面搭建的私有仓库。
 
 ```bash
-$ docker-machine ssh manager1 docker pull reg.example.com/library/nginx:alpine     
+$ docker-machine ssh manager1 docker pull reg.example.com/library/nginx:alpine
 alpine: Pulling from library/nginx
 e110a4a17941: Pulling fs layer
 ... ...
@@ -295,7 +295,7 @@ e110a4a17941: Pulling fs layer
 7648f5d87006: Pull complete
 Digest: sha256:65063cb82bf508fd5a731318e795b2abbfb0c22222f02ff5c6b30df7f23292fe
 Status: Downloaded newer image for reg.example.com/library/nginx:alpine
-$ docker-machine ssh worker1 docker pull reg.example.com/library/nginx:alpine 
+$ docker-machine ssh worker1 docker pull reg.example.com/library/nginx:alpine
 alpine: Pulling from library/nginx
 e110a4a17941: Pulling fs layer
 ... ...
@@ -356,6 +356,7 @@ $ docker-machine ssh worker2 docker ps -a
 CONTAINER ID   IMAGE         COMMAND         CREATED         STATUS        PORTS             NAMES
 5db707401a06   nginx:alpine  "nginx -g ..."   4 minutes ago   Up 4 minutes  80/tcp, 443/tcp   hello ...
 ```
+
 上面输出做了调整，实际的 NAMES 值为：
 
 ```bash
@@ -376,6 +377,7 @@ PING helloworld.2.16cvore0c96rby1vp0sny3mvt (10.0.0.4): 56 data bytes
 64 bytes from 10.0.0.4: seq=3 ttl=64 time=0.612 ms
 ^C
 ```
+
 然后使用 Machine 进入 worker2 节点，然后使用 docker exec -i 命令进入 helloworld.2 容器中 ping 运行在 manager1 节点的 helloworld.1 容器。
 
 ```bash
@@ -418,7 +420,7 @@ PING helloworld.2.16cvore0c96rby1vp0sny3mvt (221.179.46.194): 56 data bytes
 首先删掉上一节我们启动的 helloworld 服务：
 
 ```bash
-$ docker service rm helloworld                                 
+$ docker service rm helloworld
 helloworld
 ```
 
@@ -432,7 +434,7 @@ $ docker service create --replicas 2 --name helloworld -p 7080:80 --network=swar
 查看服务运行状态：
 
 ```bash
-$ docker service ls                                                                                
+$ docker service ls
 ID           NAME         REPLICAS     IMAGE           COMMAND
 9gfziifbii7a  helloworld     2/2        nginx:alpine
 ```
@@ -462,9 +464,9 @@ helloworld.2.7acmhj0udzusv1d7lu2tbuhu4
 $ docker service ps helloworld
 ID         NAME          IMAGE     NODE   DESIRED STATE  CURRENT STATE   ERROR
 9ikr3agyi...  helloworld.1     nginx:alpine  zuolan-pc  Running       Running 19 minutes ago  
-8f866igpl...  helloworld.2     nginx:alpine  manager1  Running       Running 4 seconds ago   
+8f866igpl...  helloworld.2     nginx:alpine  manager1  Running       Running 4 seconds ago
 7acmhj0u...   \_ helloworld.2  nginx:alpine  worker2   Shutdown       Failed 11 seconds ago  ...exit...
-$ docker service ls           
+$ docker service ls
 ID            NAME        REPLICAS  IMAGE         COMMAND
 9gfziifbii7a  helloworld  2/2       nginx:alpine
 ```
