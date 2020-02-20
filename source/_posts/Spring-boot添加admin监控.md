@@ -1,5 +1,5 @@
 ---
-title: Spring-boot添加admin监控
+title: Spring Boot添加admin监控
 tags:
   - Java
   - Spring
@@ -12,28 +12,27 @@ date: 2017-08-17 22:46:57
 ---
 ## 什么是Spring Boot Admin？
 
-Spring Boot Admin是一个用于管理和监视Spring Boot应用程序的简单应用程序。应用程序通过我们的Spring Boot Admin Client（通过http）注册，或者使用Spring Cloud（例如Eureka）进行注册。
+Spring Boot Admin是一个用于管理和监控Spring Boot应用程序的Web应用程序。应用程序通过我们的Spring Boot Admin Client（通过HTTP）注册，或者使用Spring Cloud（例如Eureka, Consul）进行注册。
 
 ## 入门
 
 ### 设置Admin Server服务
 
-- 添加Spring Boot Admin Server 和 UI依赖:
+- 添加`Spring Boot Admin Server starter`依赖:
 
 ```xml
 <dependency>
-    <groupId>de.codecentric</groupId>
-    <artifactId>spring-boot-admin-server</artifactId>
-    <version>1.5.3</version>
+  <groupId>de.codecentric</groupId>
+  <artifactId>spring-boot-admin-starter-server</artifactId>
+  <version>${spring-boot-admin.version}</version>
 </dependency>
 <dependency>
-    <groupId>de.codecentric</groupId>
-    <artifactId>spring-boot-admin-server-ui</artifactId>
-    <version>1.5.3</version>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 ```
 
-- 在主配置类上添加@EnableAdminServer注解启用Server:
+- 在主配置类上添加`@EnableAdminServer`注解启用Server:
 
 ```java
 @Configuration
@@ -48,36 +47,37 @@ public class SpringBootAdminApplication {
 
 ### 注册客户端应用
 
-#### Spring-boot-admin-starter-client
+#### Spring Boot Admin Client
 
-- 添加Spring-boot-admin-starter-client依赖:
+- 添加`spring-boot-admin-starter-client`依赖:
 
 ```xml
 <dependency>
-    <groupId>de.codecentric</groupId>
-    <artifactId>spring-boot-admin-starter-client</artifactId>
-    <version>1.5.3</version>
+  <groupId>de.codecentric</groupId>
+  <artifactId>spring-boot-admin-starter-client</artifactId>
+  <version>${spring-boot-admin.version}</version>
 </dependency>
 ```
 
-- 配置Spring-boot-admin-server的Url已注册应用:
+- 配置`Spring Boot Admin Server`的URL已注册应用:
 
-```yaml
-spring.boot.admin.url: http://localhost:8080
+```properties
+spring.boot.admin.client.url=http://localhost:8080
+management.endpoints.web.exposure.include=*
 ```
 
 #### 使用 Spring Cloud Discovery 注册
 
-- 添加Spring-cloud-starter-eureka依赖:
+- 添加`spring-cloud-starter-eureka`依赖:
 
 ```xml
 <dependency>
-    <groupId>org.springframework.cloud</groupId>
-    <artifactId>spring-cloud-starter-eureka</artifactId>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 </dependency>
 ```
 
-- 添加@EnableDiscoveryClient注解启用服务发现:
+- 添加`@EnableDiscoveryClient`注解启用服务发现:
 
 ```java
 @Configuration
@@ -97,23 +97,49 @@ public class SpringBootAdminApplication {
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int} #needed to trigger info and endpoint update after restart
   client:
     registryFetchIntervalSeconds: 5
     serviceUrl:
       defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
+  endpoint:
+    health:
+      show-details: ALWAYS
 ```
 
 ## 监控效果
 
 浏览器访问http://localhost:8080
 
-![upload successful](/images/pasted-44.png)
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot.png)
 
-![upload successful](/images/pasted-45.png)
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-details.png)
 
-![upload successful](/images/pasted-46.png)
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-metrics.png)
 
-### 更多
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-logfile.png)
+
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-environment.png)
+
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-logging.png)
+
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-jmx.png)
+
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-threads.png)
+
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-trace.png)
+
+![upload successful](https://github.com/codecentric/spring-boot-admin/raw/master/images/screenshot-journal.png)
+
+## 更多
 
 > [Github](https://github.com/codecentric/spring-boot-admin)
-> [更多功能和官方文档](https://codecentric.github.io/spring-boot-admin/1.5.3/)
+> [更多功能和官方文档](https://codecentric.github.io/spring-boot-admin/current/)
