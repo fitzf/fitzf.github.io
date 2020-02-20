@@ -1,3 +1,4 @@
+// https://zmlu.me/p/8vnsfg.html
 var gulp = require('gulp');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
