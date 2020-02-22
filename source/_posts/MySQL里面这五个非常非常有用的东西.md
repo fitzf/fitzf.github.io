@@ -1,6 +1,7 @@
 ---
 title: MySQL里面这五个非常非常有用的东西
-tags: Mysql
+tags:
+  - MySQL
 categories:
   - 数据库
 abbrlink: 59847b0b

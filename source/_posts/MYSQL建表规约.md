@@ -1,6 +1,7 @@
 ---
 title: MYSQL建表规约
-tags: Mysql
+tags:
+  - MySQL
 categories:
   - 数据库
 abbrlink: e0fecff9

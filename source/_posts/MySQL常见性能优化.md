@@ -1,6 +1,7 @@
 ---
 title: MySQL常见性能优化
-tags: Mysql
+tags:
+  - MySQL
 categories:
   - 数据库
 abbrlink: 74b6f95e

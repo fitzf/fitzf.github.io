@@ -1,7 +1,7 @@
 ---
 title: MyCLI：一个支持自动补全和语法高亮的MySQL客户端
 tags:
-  - Mysql
+  - MySQL
   - Shell
 categories:
   - 数据库

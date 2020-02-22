@@ -3,6 +3,7 @@ title: 'Spring中使用logback打印日志，替换其他日志如log4j,commons-
 tags:
   - Java
   - Spring
+  - Log
 categories:
   - Spring
 abbrlink: 1a9710e
