@@ -121,6 +121,43 @@ scheme: Gemini
 # External url should start with http:// or https://
 menu:
   home: / || home
+
+  设计模式:
+    default: /design-pattern/ || cubes
+    概述: /overview.html || flag
+    分类和功能: /categories.html || sitemap
+    UML类图: /uml-class-diagram.html || image
+    面向对象设计原则: /object-oriented-design.html || object-ungroup
+    创建型模式:
+      default: /creation-mode/ || folder-open
+      单例模式: /singleton.html || book
+      原型模式: /prototype.html || book
+      工厂方法模式: /factory-method.html || book
+      抽象工厂模式: /abstract-factory.html || book
+      建造者模式: /builder.html || book
+    结构型模式:
+      default: /structural-model/ || linode
+      代理模式: /proxy.html || book
+      适配器模式: /adapter.html || book
+      桥接模式: /bridge.html || book
+      装饰模式: /decorator.html || book
+      外观模式: /facade.html || book
+      享元模式: /flyweight.html || book
+      组合模式: /composite.html || book
+    行为型模式:
+      default: /behavioral-model/ || behance-square
+      模板方法模式: /template-method.html || book
+      策略模式: /strategy.html || book
+      命令模式: /command.html || book
+      责任链模式: /chain-of-responsibility.html || book
+      状态模式: /state.html || book
+      观察者模式: /observer.html || book
+      中介者模式: /mediator.html || book
+      迭代器模式: /iterator.html || book
+      访问者模式: /visitor.html || book
+      备忘录模式: /memento.html || book
+      解释器模式: /interpreter.html || book
+
   about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
