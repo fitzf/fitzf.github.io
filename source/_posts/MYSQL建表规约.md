@@ -1,7 +1,8 @@
 ---
 title: MYSQL建表规约
 tags: Mysql
-categories: Essay
+categories:
+  - 数据库
 abbrlink: e0fecff9
 date: 2017-04-08 18:05:29
 ---

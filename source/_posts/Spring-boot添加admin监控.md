@@ -6,7 +6,7 @@ tags:
   - Spring Boot
   - Monitor
 categories:
-  - Collection
+  - Spring
 abbrlink: 5ec24585
 date: 2017-08-17 22:46:57
 ---

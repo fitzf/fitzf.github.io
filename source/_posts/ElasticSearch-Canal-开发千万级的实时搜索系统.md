@@ -3,7 +3,8 @@ title: ElasticSearch + Canal 开发千万级的实时搜索系统
 tags:
   - Java
   - ElasticSearch
-categories: Essay
+categories:
+ - 未分类
 abbrlink: 5844eaeb
 date: 2017-04-08 17:50:29
 ---

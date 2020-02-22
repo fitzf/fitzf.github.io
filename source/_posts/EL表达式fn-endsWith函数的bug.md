@@ -3,7 +3,8 @@ title: 'EL表达式fn:endsWith函数的bug'
 tags:
   - Java
   - Jstl
-categories: Collection
+categories:
+  - Java基础
 abbrlink: 73c8edbb
 date: 2017-03-24 23:31:59
 ---

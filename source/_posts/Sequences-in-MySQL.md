@@ -1,7 +1,8 @@
 ---
 title: Sequences in MySQL
 tags: Mysql
-categories: Essay
+categories:
+  - 数据库
 abbrlink: d063c7dd
 date: 2017-03-24 13:00:42
 ---

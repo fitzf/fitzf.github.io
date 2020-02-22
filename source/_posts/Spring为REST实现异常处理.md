@@ -6,7 +6,7 @@ tags:
   - Spring Boot
   - Rest
 categories:
-  - Collection
+  - Spring
 abbrlink: ca1a43ab
 date: 2017-08-13 00:30:24
 ---

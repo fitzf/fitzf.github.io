@@ -5,7 +5,8 @@ tags:
   - Proxy
   - CGlib
   - AOP
-categories: Essay
+categories:
+  - Java基础
 abbrlink: 3a5f5aec
 date: 2017-03-22 18:20:58
 ---

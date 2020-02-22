@@ -3,7 +3,8 @@ title: MyCLI：一个支持自动补全和语法高亮的MySQL客户端
 tags:
   - Mysql
   - Shell
-categories: Collection
+categories:
+  - 数据库
 abbrlink: 2f03f1fe
 date: 2017-06-07 17:24:06
 ---

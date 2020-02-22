@@ -1,7 +1,8 @@
 ---
 title: MySQL里面这五个非常非常有用的东西
 tags: Mysql
-categories: Essay
+categories:
+  - 数据库
 abbrlink: 59847b0b
 date: 2017-04-08 18:02:04
 ---

@@ -5,7 +5,7 @@ tags:
   - Kubernetes
   - Docker
 categories:
-  - 工具分享
+  - 工具
 abbrlink: 4fa5d2db
 date: 2017-05-18 20:33:40
 ---
@@ -13,7 +13,7 @@ date: 2017-05-18 20:33:40
 
 ![Kubernetes](http://p1.pstatp.com/large/212f0004094fad2d1aa6)
 
-# Kube-applier
+## Kube-applier
 
 Kubernetes成功的关键是其与除Google以外的IT厂商和产品的接触。云存储公司Box收购了Kubernetes，并开放了一些用于帮助其内部部署的项目，kube-applier就是这样一个项目。
 
@@ -21,13 +21,13 @@ Kubernetes成功的关键是其与除Google以外的IT厂商和产品的接触�
 
 更改也可以按计划或按需应用。Kube应用程序每次运行时都会记录其行为，并提供与Prometheus兼容的指标，以便用户及时了解影响集群的行为。
 
-# Kubetop
+## Kubetop
 
 有时最简单的工具反而是最有用的，比如Kubetop，它用Python编写，Kubetop会列出所有当前运行的节点，这些节点上所有的pod，这些pod中的所有容器，每个节点的CPU和内存利用率，类似于Unix/Linux top的命令。它不应该用来替代更精细的日志记录或报告工具，因为它产生的信息太简单了，但有时候简单会让阅读Kubernetes集群报告更节省时间。
 
 如果您只需要快速了解哪些因素和命令行影响了集群，这是一个很方便的选项。Kubernetes的kubectl也有类似的功能，但是Kubetop的输出格式更加整齐。
 
-# Kubectx/K8senv
+## Kubectx/K8senv
 
 Kubernetes有一个“上下文”的概念，用于引用具有不同配置数据的离散集群。用kubectl命令行工具在上下文之间切换可能是冗长和笨拙的，所以第三方提出了在flash中切换上下文的方法。
 
@@ -35,7 +35,7 @@ Kubernetes有一个“上下文”的概念，用于引用具有不同配置数�
 
 另外一个shell脚本K8senv要简单得多，但功能远远不够强大。例如，它不能在当前和最后一个上下文之间进行翻转。
 
-# kubeadm-dind-cluster
+## kubeadm-dind-cluster
 
 如果你想启动一个本地的单节点Kubernetes实例进行测试，那么Kubernetes提供了一个很好的默认组件：Minikube。但是对于那些想要测试和开发多节点集群Kubernetes的人还有一个选择：Mirantis的kubeadm-dind-cluster（KDC）。
 

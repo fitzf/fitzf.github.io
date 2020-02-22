@@ -1,7 +1,8 @@
 ---
 title: Java中创建对象的5种不同方法
 tags: Java
-categories: Essay
+categories:
+  - Java基础
 abbrlink: c7baf04f
 date: 2017-04-08 18:13:23
 ---

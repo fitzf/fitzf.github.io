@@ -2,8 +2,9 @@
 title: Docker的Secrets管理
 tags:
   - Docker
+  - Secret
 categories:
-  - Essay
+  - 容器技术
 abbrlink: b8062d72
 date: 2017-05-18 20:41:58
 ---

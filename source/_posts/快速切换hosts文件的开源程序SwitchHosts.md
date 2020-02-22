@@ -5,8 +5,7 @@ tags:
   - Hosts
   - Software
 categories:
-  - Collection
-  - Software
+  - 工具
 abbrlink: d04e924f
 date: 2017-07-07 22:44:50
 ---

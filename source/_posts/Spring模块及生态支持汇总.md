@@ -3,7 +3,8 @@ title: Spring模块及生态支持汇总
 tags:
   - Spring
   - Java
-categories: Essay
+categories:
+  - Spring
 abbrlink: c2ac83af
 date: 2017-04-09 13:06:51
 ---

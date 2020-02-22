@@ -5,7 +5,7 @@ tags:
   - Spring
   - Spring Boot
 categories:
-  - Collection
+  - Spring
 abbrlink: 69b13214
 date: 2017-08-14 23:50:34
 ---

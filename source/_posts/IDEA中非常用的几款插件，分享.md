@@ -4,7 +4,8 @@ tags:
   - IDE
   - JetBrains
   - IntelliJ IDEA
-categories: Collection
+categories:
+  - 工具
 abbrlink: 2dd646f0
 date: 2017-04-08 17:43:52
 ---

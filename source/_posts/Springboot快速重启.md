@@ -6,7 +6,7 @@ tags:
   - Spring Boot
   - Boot Basics
 categories:
-  - 开发者工具
+  - Spring
 abbrlink: eb48025f
 date: 2017-08-09 23:15:52
 ---

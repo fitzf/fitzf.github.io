@@ -5,7 +5,7 @@ tags:
   - Docker
   - Docker Swarm
 categories:
-  - Collection
+  - 容器技术
 abbrlink: 18246ef3
 date: 2017-07-06 23:23:31
 ---
