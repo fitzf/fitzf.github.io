@@ -327,8 +327,8 @@ tagcloud:
 # Google Calendar
 # Share your recent schedule to others via calendar page.
 calendar:
-  calendar_id: 5rlpm46pk8j9efvbmc5dmtit6v2scc3k@import.calendar.google.com # Your Google account E-Mail
-  api_key: AIzaSyD5ZJGwDLY94UpFMUt6Lawbdu8AtYfuq-g
+  calendar_id: zhangfei.eason@gmail.com # Your Google account E-Mail
+  api_key: AIzaSyBGT3Drz0OIK9aKH4EhqnGuL-tKi1ILNmY
   orderBy: startTime
   offsetMax: 24 # Time Range
   offsetMin: 4 # Time Range
