@@ -9,3 +9,4 @@ public/
 *.iml
 yarn.lock
 package-lock.json
+.vscode/

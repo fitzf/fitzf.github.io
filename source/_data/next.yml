@@ -40,10 +40,15 @@ custom_file_path:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
-  safari_pinned_tab: /images/logo.svg
+  # small: /images/favicon-16x16-next.png
+  # medium: /images/favicon-32x32-next.png
+  # apple_touch_icon: /images/apple-touch-icon-next.png
+  # safari_pinned_tab: /images/logo.svg
+  small: /images/favicon/favicon-16x16.png
+  medium: /images/favicon/favicon-32x32.png
+  apple_touch_icon: /images/favicon/apple-touch-icon.png
+  safari_pinned_tab: /images/favicon/safari-pinned-tab.svg
+  ms_browserconfig: /images/favicon/browserconfig.xml
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
 
@@ -130,33 +135,33 @@ menu:
     面向对象设计原则: /object-oriented-design.html || object-ungroup
     创建型模式:
       default: /creation-mode/ || folder-open
-      单例模式: /singleton.html || book
-      原型模式: /prototype.html || book
-      工厂方法模式: /factory-method.html || book
-      抽象工厂模式: /abstract-factory.html || book
-      建造者模式: /builder.html || book
+      1. 单例模式: /singleton.html || code
+      2. 原型模式: /prototype.html || code
+      3. 工厂方法模式: /factory-method.html || code
+      4. 抽象工厂模式: /abstract-factory.html || code
+      5. 建造者模式: /builder.html || code
     结构型模式:
       default: /structural-model/ || linode
-      代理模式: /proxy.html || book
-      适配器模式: /adapter.html || book
-      桥接模式: /bridge.html || book
-      装饰模式: /decorator.html || book
-      外观模式: /facade.html || book
-      享元模式: /flyweight.html || book
-      组合模式: /composite.html || book
+      6. 代理模式: /proxy.html || code
+      7. 适配器模式: /adapter.html || code
+      8. 桥接模式: /bridge.html || code
+      9. 装饰模式: /decorator.html || code
+      10. 外观模式: /facade.html || code
+      11. 享元模式: /flyweight.html || code
+      12. 组合模式: /composite.html || code
     行为型模式:
       default: /behavioral-model/ || behance-square
-      模板方法模式: /template-method.html || book
-      策略模式: /strategy.html || book
-      命令模式: /command.html || book
-      责任链模式: /chain-of-responsibility.html || book
-      状态模式: /state.html || book
-      观察者模式: /observer.html || book
-      中介者模式: /mediator.html || book
-      迭代器模式: /iterator.html || book
-      访问者模式: /visitor.html || book
-      备忘录模式: /memento.html || book
-      解释器模式: /interpreter.html || book
+      13. 模板方法模式: /template-method.html || code
+      14. 策略模式: /strategy.html || code
+      15. 命令模式: /command.html || code
+      16. 责任链模式: /chain-of-responsibility.html || code
+      17. 状态模式: /state.html || code
+      18. 观察者模式: /observer.html || code
+      19. 中介者模式: /mediator.html || code
+      20. 迭代器模式: /iterator.html || code
+      21. 访问者模式: /visitor.html || code
+      22. 备忘录模式: /memento.html || code
+      23. 解释器模式: /interpreter.html || code
 
   about: /about/ || user
   tags: /tags/ || tags

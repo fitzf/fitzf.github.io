@@ -13,5 +13,38 @@ date: 2020-02-21 10:31:11
 - 对于简单的程序，可能写一个简单的算法要比引入某种设计模式更加容易；
 - 但是对于大型项目开发或者框架设计，用设计模式来组织代码显然更好。
 
+## 目录
+
+- [软件设计模式概述](/design-pattern/overview.html)
+- [GoF的23种设计模式的分类和功能](/design-pattern/categories.html)
+- [UML中的类图及类图之间的关系](/design-pattern/uml-class-diagram.html)
+- [面向对象设计原则](/design-pattern/object-oriented-design.html)
+- [创建型模式](/design-pattern/creation-mode/)
+  - [1. 单例模式](/design-pattern/creation-mode/singleton.html)
+  - [2. 原型模式](/design-pattern/creation-mode/prototype.html)
+  - [3. 工厂方法模式](/design-pattern/creation-mode/factory-method.html)
+  - [4. 抽象工厂模式](/design-pattern/creation-mode/abstract-factory.html)
+  - [5. 建造者模式](/design-pattern/creation-mode/builder.html)
+- [结构型模式](/design-pattern/structural-model/)
+  - [6. 代理模式](/design-pattern/structural-model/proxy.html)
+  - [7. 适配器模式](/design-pattern/structural-model/adapter.html)
+  - [8. 桥接模式](/design-pattern/structural-model/bridge.html)
+  - [9. 装饰模式](/design-pattern/structural-model/decorator.html)
+  - [10. 外观模式](/design-pattern/structural-model/facade.html)
+  - [11. 享元模式](/design-pattern/structural-model/flyweight.html)
+  - [12. 组合模式](/design-pattern/structural-model/composite.html)
+- [行为型模式](/design-pattern/behavioral-model/)
+  - [13. 模板方法模式](/design-pattern/behavioral-model/template-method.html)
+  - [14. 策略模式](/design-pattern/behavioral-model/strategy.html)
+  - [15. 命令模式](/design-pattern/behavioral-model/command.html)
+  - [16. 责任链模式](/design-pattern/behavioral-model/chain-of-responsibility.html)
+  - [17. 状态模式](/design-pattern/behavioral-model/state.html)
+  - [18. 观察者模式](/design-pattern/behavioral-model/observer.html)
+  - [19. 中介者模式](/design-pattern/behavioral-model/mediator.html)
+  - [20. 迭代器模式](/design-pattern/behavioral-model/iterator.html)
+  - [21. 访问者模式](/design-pattern/behavioral-model/visitor.html)
+  - [22. 备忘录模式](/design-pattern/behavioral-model/memento.html)
+  - [23. 解释器模式](/design-pattern/behavioral-model/interpreter.html)
+
 > **作者：**C语言中文网
 > **原文链接：**[http://c.biancheng.net/design_pattern/](http://c.biancheng.net/design_pattern/)
