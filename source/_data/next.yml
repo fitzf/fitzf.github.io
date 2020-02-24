@@ -134,14 +134,14 @@ menu:
     UML类图: /uml-class-diagram.html || image
     面向对象设计原则: /object-oriented-design.html || object-ungroup
     创建型模式:
-      default: /creation-mode/ || folder-open
+      default: /creational-pattern/ || folder-open
       1. 单例模式: /singleton.html || code
       2. 原型模式: /prototype.html || code
       3. 工厂方法模式: /factory-method.html || code
       4. 抽象工厂模式: /abstract-factory.html || code
       5. 建造者模式: /builder.html || code
     结构型模式:
-      default: /structural-model/ || linode
+      default: /structural-pattern/ || linode
       6. 代理模式: /proxy.html || code
       7. 适配器模式: /adapter.html || code
       8. 桥接模式: /bridge.html || code
@@ -150,7 +150,7 @@ menu:
       11. 享元模式: /flyweight.html || code
       12. 组合模式: /composite.html || code
     行为型模式:
-      default: /behavioral-model/ || behance-square
+      default: /behavioral-pattern/ || behance-square
       13. 模板方法模式: /template-method.html || code
       14. 策略模式: /strategy.html || code
       15. 命令模式: /command.html || code
