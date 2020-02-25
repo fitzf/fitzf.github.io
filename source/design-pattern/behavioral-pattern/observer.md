@@ -33,7 +33,7 @@ date: 2020-02-21 16:16:30
 
 观察者模式的结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204075441-39ff2b2a-d436-4d0c-94c4-311bf811efd5.gif)
+![upload successful](/images/pasted-88.png)
 <center>图1 观察者模式的结构图</center>
 
 ### 2. 模式的实现
@@ -129,7 +129,7 @@ class ConcreteObserver2 implements Observer {
 这里的汇率（Rate）类是抽象目标类，它包含了保存观察者（Company）的 List 和增加/删除观察者的方法，以及有关汇率改变的抽象方法 change(int number)；而人民币汇率（RMBrate）类是具体目标， 它实现了父类的 change(int number) 方法，即当人民币汇率发生改变时通过相关公司；公司（Company）类是抽象观察者，它定义了一个有关汇率反应的抽象方法 response(int 
 number)；进口公司（ImportCompany）类和出口公司（ExportCompany）类是具体观察者类，它们实现了父类的 response(int number) 方法，即当它们接收到汇率发生改变的通知时作为相应的反应。图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204075448-8cf6c96a-95a5-4c94-81a7-cde07ae8e449.gif)
+![upload successful](/images/pasted-89.png)
 <center>图2 人民币汇率分析程序的结构图</center>
 
 程序代码如下：
@@ -226,12 +226,12 @@ class ExportCompany implements Company {
 【例2】利用观察者模式设计一个学校铃声的事件处理程序。
 分析：在本实例中，学校的“铃”是事件源和目标，“老师”和“学生”是事件监听器和具体观察者，“铃声”是事件类。学生和老师来到学校的教学区，都会注意学校的铃，这叫事件绑定；当上课时间或下课时间到，会触发铃发声，这时会生成“铃声”事件；学生和老师听到铃声会开始上课或下课，这叫事件处理。这个实例非常适合用观察者模式实现，图 3 给出了学校铃声的事件模型。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204075444-b5cc5ac5-7629-440d-aaf0-c28cf541e02a.gif)
+![upload successful](/images/pasted-90.png)
 <center>图3 学校铃声的事件模型图</center>
 
 现在用“观察者模式”来实现该事件处理模型。首先，定义一个铃声事件（RingEvent）类，它记录了铃声的类型（上课铃声/下课铃声）；再定义一个学校的铃（BellEventSource）类，它是事件源，是观察者目标类，该类里面包含了监听器容器 listener，可以绑定监听者（学生或老师），并且有产生铃声事件和通知所有监听者的方法；然后，定义一声事件监听者（BellEventListener）类，它是抽象观察者，它包含了铃声事件处理方法 heardBell(RingEvente)；最后，定义老师类（TeachEventListener）和学生类（StuEventListener），它们是事件监听器，是具体观察者，听到铃声会去上课或下课。图 4 给出了学校铃声事件处理程序的结构。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204075446-fbf772df-3228-4def-911a-9a7d1aad144a.gif)
+![upload successful](/images/pasted-91.png)
 <center>图4 学校铃声事件处理程序的结构图</center>
 
 程序代码如下：
@@ -379,7 +379,7 @@ Observer 接口是抽象观察者，它监视目标对象的变化，当目标�
 【例3】利用 Observable 类和 Observer 接口实现原油期货的观察者模式实例。
 分析：当原油价格上涨时，空方伤心，多方局兴；当油价下跌时，空方局兴，多方伤心。本实例中的抽象目标（Observable)类在 Java 中已经定义，可以直接定义其子类，即原油期货（OilFutures)类，它是具体目标类，该类中定义一个 SetPriCe(float price) 方法，当原油数据发生变化时调用其父类的 notifyObservers(Object arg) 方法来通知所有观察者；另外，本实例中的抽象观察者接口（Observer）在 Java 中已经定义，只要定义其子类，即具体观察者类（包括多方类 Bull 和空方类 Bear），并实现 update(Observable o,Object arg) 方法即可。图 5 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204075474-b0ef5166-f00e-4f8e-954c-847a79a41be0.gif)
+![upload successful](/images/pasted-92.png)
 <center>图5 原油期货的观察者模式实例的结构图</center>
 
 程序代码如下：

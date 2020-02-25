@@ -36,7 +36,7 @@ date: 2020-02-21 16:16:23
 
 其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203047973-44b84c92-70c2-4ae3-8628-8b4866871d8b.gif)
+![upload successful](/images/pasted-105.png)
 <center>图1 策略模式的结构图</center>
 
 ### 2. 模式的实现
@@ -115,7 +115,7 @@ class Context {
 分析：关于大闸蟹的做法有很多种，我们以清蒸大闸蟹和红烧大闸蟹两种方法为例，介绍策略模式的应用。
 首先，定义一个大闸蟹加工的抽象策略类（CrabCooking），里面包含了一个做菜的抽象方法 CookingMethod()；然后，定义清蒸大闸蟹（SteamedCrabs）和红烧大闸蟹（BraisedCrabs）的具体策略类，它们实现了抽象策略类中的抽象方法；由于本程序要显示做好的结果图（[点此下载要显示的结果图](http://c.biancheng.net/uploads/soft/181113/3-1Q116104147.zip)），所以将具体策略类定义成 JLabel 的子类；最后，定义一个厨房（Kitchen）环境类，它具有设置和选择做菜策略的方法；客户类通过厨房类获取做菜策略，并把做菜结果图在窗体中显示出来，图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203047929-15fbd2c7-6692-4d5a-abd9-2f75309dce77.gif)
+![upload successful](/images/pasted-106.png)
 <center>图2 大闸蟹做菜策略的结构图</center>
 
 程序代码如下：
@@ -235,13 +235,13 @@ class Kitchen {
 
 程序运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582203047921-6f011b9f-b30a-44bb-812c-46805601099f.jpeg)
+![upload successful](/images/pasted-107.png)
 <center>图3 大闸蟹做菜结果</center>
 
 【例2】用策略模式实现从韶关去婺源旅游的出行方式。
 分析：从韶关去婺源旅游有以下几种出行方式：坐火车、坐汽车和自驾车，所以该实例用策略模式比较适合，图 4 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203047920-eeddd750-f464-4a0f-9b3a-197b13cacd4e.gif)
+![upload successful](/images/pasted-108.png)
 <center>图4 婺源旅游结构图</center>
 
 ## 策略模式的应用场景
@@ -258,7 +258,7 @@ class Kitchen {
 
 在一个使用策略模式的系统中，当存在的策略很多时，客户端管理所有策略算法将变得很复杂，如果在环境类中使用策略工厂模式来管理这些策略类将大大减少客户端的工作复杂度，其结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203047927-ea147551-3753-4e1f-b710-4bf26ab744e4.gif)
+![upload successful](/images/pasted-109.png)
 <center>图5 策略工厂模式的结构图</center>
 
 > **作者：**C语言中文网

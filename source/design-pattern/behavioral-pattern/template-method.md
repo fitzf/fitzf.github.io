@@ -39,7 +39,7 @@ date: 2020-02-21 16:16:22
 (2) 具体子类（Concrete Class）：实现抽象类中所定义的抽象方法和钩子方法，它们是一个顶级逻辑的一个组成步骤。
 模板方法模式的结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202812570-d818aece-4824-441e-9f73-597bd3c48990.gif)
+![upload successful](/images/pasted-110.png)
 <center>图1 模板方法模式的结构图</center>
 
 ### 2. 模式的实现
@@ -104,7 +104,7 @@ class ConcreteClass extends AbstractClass {
 分析：出国留学手续一般经过以下流程：索取学校资料，提出入学申请，办理因私出国护照、出境卡和公证，申请签证，体检、订机票、准备行装，抵达目标学校等，其中有些业务对各个学校是一样的，但有些业务因学校不同而不同，所以比较适合用模板方法模式来实现。
 在本实例中，我们先定义一个出国留学的抽象类 StudyAbroad，里面包含了一个模板方法 TemplateMethod()，该方法中包含了办理出国留学手续流程中的各个基本方法，其中有些方法的处理由于各国都一样，所以在抽象类中就可以实现，但有些方法的处理各国是不同的，必须在其具体子类（如美国留学类 StudyInAmerica）中实现。如果再增加一个国家，只要增加一个子类就可以了，图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202812619-5f161bf2-4861-43dd-9cce-a29349461b0f.gif)
+![upload successful](/images/pasted-111.png)
 <center>图2 出国留学手续设计程序的结构图</center>
 
 程序代码如下：
@@ -234,7 +234,7 @@ class StudyInAmerica extends StudyAbroad {
 
 在模板方法模式中，基本方法包含：抽象方法、具体方法和钩子方法，正确使用“钩子方法”可以使得子类控制父类的行为。如下面例子中，可以通过在具体子类中重写钩子方法 HookMethod1() 和 HookMethod2() 来改变抽象父类中的运行结果，其结构图如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202812584-5abb4b86-51c5-4caf-b759-217a75a53582.gif)
+![upload successful](/images/pasted-112.png)
 <center>图3 含钩子方法的模板方法模式的结构图</center>
 
 程序代码如下：

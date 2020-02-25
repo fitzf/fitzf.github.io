@@ -31,7 +31,8 @@ date: 2020-02-21 16:16:25
 4. 调用者/请求者（Invoker）角色：是请求的发送者，它通常拥有很多的命令对象，并通过访问命令对象来执行相关请求，它不直接访问接收者。
 
 其结构图如图 1 所示。
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203226892-5a6cf498-84e6-4777-bf1d-1d0605eacc8a.gif)
+
+![upload successful](/images/pasted-101.png)
 <center>图1 命令模式的结构图</center>
 
 ### 2. 模式的实现
@@ -113,7 +114,7 @@ class Receiver {
 分析：客户去餐馆可选择的早餐有肠粉、河粉和馄饨等，客户可向服务员选择以上早餐中的若干种，服务员将客户的请求交给相关的厨师去做。这里的点早餐相当于“命令”，服务员相当于“调用者”，厨师相当于“接收者”，所以用命令模式实现比较合适。
 首先，定义一个早餐类（Breakfast），它是抽象命令类，有抽象方法 cooking()，说明要做什么；再定义其子类肠粉类（ChangFen）、馄饨类（HunTun）和河粉类（HeFen），它们是具体命令类，实现早餐类的 cooking() 方法，但它们不会具体做，而是交给具体的厨师去做；具体厨师类有肠粉厨师（ChangFenChef）、馄蚀厨师（HunTunChef）和河粉厨师（HeFenChef），他们是命令的接收者，由于本实例要显示厨师做菜的效果图（[点此下载要显示的效果图](http://c.biancheng.net/uploads/soft/181113/3-1Q116125200.zip)），所以把每个厨师类定义为 JFrame 的子类；最后，定义服务员类（Waiter），它接收客户的做菜请求，并发出做菜的命令。客户类是通过服务员类来点菜的，图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203226888-74cebcad-226f-4053-beaf-62c86b945330.gif)
+![upload successful](/images/pasted-102.png)
 <center>图2 客户在餐馆吃早餐的结构图</center>
 
 程序代码如下：
@@ -285,7 +286,7 @@ class HeFenChef extends JFrame {
 
 程序的运行结果如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582203226892-6a26637e-b7f4-444b-8a2c-accfe3997984.jpeg)
+![upload successful](/images/pasted-103.png)
 <center>图2 客户在餐馆吃早餐的运行结果</center>
 
 ## 命令模式的应用场景
@@ -301,7 +302,7 @@ class HeFenChef extends JFrame {
 
 在软件开发中，有时将命令模式与前面学的组合模式联合使用，这就构成了宏命令模式，也叫组合命令模式。宏命令包含了一组命令，它充当了具体命令与调用者的双重角色，执行它时将递归调用它所包含的所有命令，其具体结构图如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203226888-1c62c115-1927-44d7-847c-ed0dd23837c2.gif)
+![upload successful](/images/pasted-104.png)
 <center>图3 组合命令模式的结构图</center>
 
 程序代码如下：

@@ -30,7 +30,7 @@ date: 2020-02-21 16:16:36
 
 备忘录模式的结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204987406-60f2c14e-a141-4fd5-86c6-cc34a1bdc7e1.gif)
+![upload successful](/images/pasted-71.png)
 <center>图1 备忘录模式的结构图</center>
 
 ### 2. 模式的实现
@@ -126,7 +126,7 @@ class Caretaker {
  4 个，提供后悔功能。
  客户类设计成窗体程序，它包含美女栈（GirlStack）对象和相亲者（You）对象，它实现了 ActionListener 接口的事件处理方法 actionPerformed(ActionEvent e)，并将 4 大美女图像和相亲者（You）选择的美女图像在窗体中显示出来。图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204987447-f76acf3b-072e-4e86-be2e-d4fce68d5454.gif)
+![upload successful](/images/pasted-72.png)
 <center>图2 相亲游戏的结构图</center>
 
 程序代码如下：
@@ -317,8 +317,8 @@ class GirlStack {
 
 程序运行结果如图 3 所示。
 
-[![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582204987421-36ded6bb-09da-4fa2-bdd4-951d5e0f6f6f.jpeg)](http://c.biancheng.net/uploads/allimg/181119/3-1Q1191305555M.jpg)
-图3 相亲游戏的运行结果（[点此查看原图](http://c.biancheng.net/uploads/allimg/181119/3-1Q1191305555M.jpg)）
+[![](/images/pasted-73.png)](/images/pasted-73.png)
+图3 相亲游戏的运行结果（[点此查看原图](/images/pasted-73.png）
 
 ## 模式的应用场景
 
@@ -331,7 +331,7 @@ class GirlStack {
 
 在前面介绍的备忘录模式中，有单状态备份的例子，也有多状态备份的例子。下面介绍备忘录模式如何同[原型模式](http://c.biancheng.net/view/1343.html)混合使用。在备忘录模式中，通过定义“备忘录”来备份“发起人”的信息，而原型模式的 clone() 方法具有自备份功能，所以，如果让发起人实现 Cloneable 接口就有备份自己的功能，这时可以删除备忘录类，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204987463-2faaa75e-c008-47c5-bf31-674bb1972d02.gif)
+![upload successful](/images/pasted-74.png)
 <center>图4 带原型的备忘录模式的结构图</center>
 
 实现代码如下：

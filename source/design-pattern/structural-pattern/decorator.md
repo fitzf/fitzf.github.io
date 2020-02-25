@@ -29,7 +29,7 @@ date: 2020-02-21 15:54:43
 
 装饰模式的结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582200688166-888ae9ec-41ac-4bc2-a457-14fb11c2c2a2.gif)
+![upload successful](/images/pasted-128.png)
 <center>图1 装饰模式的结构图</center>
 
 ### 2. 模式的实现
@@ -115,7 +115,7 @@ class ConcreteDecorator extends Decorator {
 【例1】用装饰模式实现游戏角色“莫莉卡·安斯兰”的变身。
 分析：在《恶魔战士》中，游戏角色“莫莉卡·安斯兰”的原身是一个可爱少女，但当她变身时，会变成头顶及背部延伸出蝙蝠状飞翼的女妖，当然她还可以变为穿着漂亮外衣的少女。这些都可用装饰模式来实现，在本实例中的“莫莉卡”原身有 setImage(String t) 方法决定其显示方式，而其 变身“蝙蝠状女妖”和“着装少女”可以用 setChanger() 方法来改变其外观，原身与变身后的效果用 display() 方法来显示（[点此下载其原身和变身后的图片](http://c.biancheng.net/uploads/soft/181113/3-1Q115142F6.zip)），图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582200688199-03139c0d-b2f8-422a-892a-41d88cbb81a0.gif)
+![upload successful](/images/pasted-129.png)
 <center>图2 游戏角色“莫莉卡·安斯兰”的结构图</center>
 
 程序代码如下：
@@ -221,7 +221,7 @@ class Girl extends Changer {
 
 程序运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582200688164-df602e31-f4d0-4f74-8a6b-ff5a071c0a05.gif)
+![upload successful](/images/pasted-130.png)
 <center>图3 游戏角色“莫莉卡·安斯兰”的变身</center>
 
 ## 装饰模式的应用场景
@@ -245,12 +245,12 @@ class Girl extends Changer {
 装饰模式所包含的 4 个角色不是任何时候都要存在的，在有些应用环境下模式是可以简化的，如以下两种情况。
 (1) 如果只有一个具体构件而没有抽象构件时，可以让抽象装饰继承具体构件，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582200688166-17ae4cca-32d5-43cf-b591-1cafd2047f31.gif)
+![upload successful](/images/pasted-131.png)
 <center>图4 只有一个具体构件的装饰模式</center>
 
 (2) 如果只有一个具体装饰时，可以将抽象装饰和具体装饰合并，其结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582200688161-c991715d-af3c-4bae-8d32-dcfe9299c64d.gif)
+![upload successful](/images/pasted-132.png)
 <center>图5 只有一个具体装饰的装饰模式</center>
 
 > **作者：**C语言中文网

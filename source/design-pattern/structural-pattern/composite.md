@@ -32,19 +32,19 @@ date: 2020-02-21 15:54:48
 组合模式分为透明式的组合模式和安全式的组合模式。
 (1) 透明方式：在该方式中，由于抽象构件声明了所有子类中的全部方法，所以客户端无须区别树叶对象和树枝对象，对客户端来说是透明的。但其缺点是：树叶构件本来没有 Add()、Remove() 及 GetChild() 方法，却要实现它们（空实现或抛异常），这样会带来一些安全性问题。其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202587173-7e13d4c5-c0f5-4f61-b1f9-0b3c606b4e43.gif)
+![upload successful](/images/pasted-113.png)
 <center>图1 透明式的组合模式的结构图</center>
 
 (2) 安全方式：在该方式中，将管理子构件的方法移到树枝构件中，抽象构件和树叶构件没有对子对象的管理方法，这样就避免了上一种方式的安全性问题，但由于叶子和分支有不同的接口，客户端在调用时要知道树叶对象和树枝对象的存在，所以失去了透明性。其结构图如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202587188-1e7e61ba-f48b-4d44-94ad-6a72da71f5b6.gif)
+![upload successful](/images/pasted-114.png)
 <center>图2 安全式的组合模式的结构图</center>
 
 ### 2. 模式的实现
 
 假如要访问集合 c0={leaf1,{leaf2,leaf3}} 中的元素，其对应的树状图如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202587208-1484d2f8-7101-438f-b1fd-75bf405a9df3.gif)
+![upload successful](/images/pasted-115.png)
 <center>图3 集合c0的树状图</center>
 
 下面给出透明式的组合模式的实现代码，与安全式的组合模式的实现代码类似，只要对其做简单修改就可以了。
@@ -147,7 +147,7 @@ class Composite implements Component {
 最后“大袋子”中的内容有：{1 双李宁牌运动鞋（单价 198 元）、白色小袋子{2 包韶关香菇（单价 68 元）、3 包韶关红茶（单价 180 元）}、中袋子{1 个景德镇瓷器（单价 380 元）、红色小袋子{2 包婺源特产（单价 7.9 元）、1 张婺源地图（单价 9.9 元）}}}，现在要求编程显示李先生放在大袋子中的所有商品信息并计算要支付的总价。
 本实例可按安全组合模式设计，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202587191-2dd456c8-34d3-4e3e-a05b-5c03cf9adfd9.gif)
+![upload successful](/images/pasted-116.png)
 <center>图4 韶关“天街e角”店购物的结构图</center>
 
 程序代码如下：
@@ -281,7 +281,7 @@ class Bags implements Articles {
 
 如果对前面介绍的组合模式中的树叶节点和树枝节点进行抽象，也就是说树叶节点和树枝节点还有子节点，这时组合模式就扩展成复杂的组合模式了，如 [Java](http://c.biancheng.net/java/) AWT/[Swing](http://c.biancheng.net/swing/) 中的简单组件 JTextComponent 有子类 JTextField、JTextArea，容器组件 Container 也有子类 Window、Panel。复杂的组合模式的结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202587242-234d272f-462a-45bd-b7d1-952ec5c426ba.gif)
+![upload successful](/images/pasted-117.png)
 <center>图5 复杂的组合模式的结构图</center>
 
 > **作者：**C语言中文网

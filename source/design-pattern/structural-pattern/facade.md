@@ -6,7 +6,7 @@ date: 2020-02-21 15:54:45
 软件设计也是这样，当一个系统的功能越来越强，子系统会越来越多，客户对系统的访问也变得越来越复杂。这时如果系统内部发生改变，客户端也要跟着改变，这违背了“开闭原则”，也违背了“迪米特法则”，所以有必要为多个子系统提供一个统一的接口，从而降低系统的耦合度，这就是外观模式的目标。
 图 1 给出了客户去当地房产局办理房产证过户要遇到的相关部门。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202234024-030ebe72-a2c9-4012-8f4e-4630d92396b3.gif)
+![upload successful](/images/pasted-123.png)
 <center>图1 办理房产证过户的相关部门</center>
 
 ## 外观模式的定义与特点
@@ -37,7 +37,7 @@ date: 2020-02-21 15:54:45
 
 其结构图如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202234022-dd523954-be9a-48c6-913b-6acafbe25573.gif)
+![upload successful](/images/pasted-124.png)
 <center>图2 外观（Facade）模式的结构图</center>
 
 ### 2. 模式的实现
@@ -109,7 +109,7 @@ class SubSystem03 {
 外观类（WySpecialty）用 JTree 组件来管理婺源特产的名称，并定义一个事件处理方法 valueClianged(TreeSelectionEvent e)，当用户从树中选择特产时，该特产的图标对象保存在标签（JLabd）对象中。
 客户窗体对象用分割面板来实现，左边放外观角色的目录树，右边放显示所选特产图像的标签。其结构图如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202234031-b752eabf-78fe-4b51-8147-74a88c35219e.gif)
+![upload successful](/images/pasted-125.png)
 <center>图3 婺源特产管理界面的结构图</center>
 
 程序代码如下：
@@ -301,7 +301,7 @@ class Specialty8 extends ImageIcon {
 
 程序运行结果如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582202234023-5fb53acb-76a4-4c34-a0ac-bb437ee1b1ec.jpeg)
+![upload successful](/images/pasted-126.png)
 <center>图4 婺源特产管理界面的运行结果</center>
 
 ## 外观模式的应用场景
@@ -316,7 +316,7 @@ class Specialty8 extends ImageIcon {
 
 在外观模式中，当增加或移除子系统时需要修改外观类，这违背了“开闭原则”。如果引入抽象外观类，则在一定程度上解决了该问题，其结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202234019-7aca8388-6820-43e0-8c45-53493bd6e34f.gif)
+![upload successful](/images/pasted-127.png)
 <center>图5 引入抽象外观类的外观模式的结构图</center>
 
 > **作者：**C语言中文网

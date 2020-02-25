@@ -7,7 +7,7 @@ tags:
   - MySQL
   - Docker
 categories:
- - 未分类
+  - 未分类
 abbrlink: 5844eaeb
 date: 2017-04-08 17:50:29
 ---
@@ -34,7 +34,7 @@ date: 2017-04-08 17:50:29
 在介绍Canal的原理之前，我们先来了解下MySQL主从复制的原理
 **MySQL主从复制原理**
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591843-89170014-2eb2-4270-85c1-075741fc23b8.png)
+![upload successful](/images/pasted-193.png)
 
 - MySQL master 将数据变更的操作写入二进制日志`binary log`中， 其中记录的内容叫做二进制日志事件`binary log events`，可以通过`show binlog events`命令进行查看
 - MySQL slave 会将 master 的`binary log`中的`binary log events` 拷贝到它的中继日志`relay log`
@@ -43,7 +43,7 @@ date: 2017-04-08 17:50:29
 了解了MySQL的工作原理，我们可以大致猜想到Canal应该也是采用类似的逻辑去实现增量数据订阅的功能，那么接下来我们看看实际上Canal的工作原理是怎样的？
 **Canal工作原理**
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591800-b2014c16-bfd0-4b41-9e0d-7ed73d3f3c20.png)
+![upload successful](/images/pasted-194.png)
 
 - Canal 模拟 MySQL slave 的交互协议，伪装自己为 MySQL slave ，向MySQL master 发送dump 协议
 - MySQL master 收到 dump 请求，开始推送 `binary log` 给 slave (也就是 Canal )
@@ -67,7 +67,7 @@ date: 2017-04-08 17:50:29
 - 不同的Image可以共享相同的layer
 - Image本身是read-only的
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591764-15ff0db7-bd82-4300-b378-5aa084fd5065.png#)
+![upload successful](/images/pasted-195.png)
 
 **什么是Container（容器）**
 
@@ -76,7 +76,7 @@ date: 2017-04-08 17:50:29
 - 类比面向对象：类和实例
 - Image负责app的存储和分发，Container负责运行app
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591737-e53508c6-4cbd-4be0-92c9-334598053d12.png)
+![upload successful](/images/pasted-196.png)
 
 ### Docker的网络介绍
 
@@ -110,22 +110,22 @@ docker network create --subnet=172.18.0.0/16 mynetwork
 
 查看存在的网络类型`docker network ls`
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591841-df828f22-76f3-4c36-bb95-16dfd9a7d1a2.png)
+![upload successful](/images/pasted-197.png)
 
 ### 搭建Canal环境
 
 附上Docker的下载安装地址==> [Docker Download](https://www.docker.com/products/docker-desktop)
 下载Canal镜像`docker pull canal/canal-server`
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591786-1e5d236d-7195-461e-8914-f50c2580bc2a.png)
+![upload successful](/images/pasted-198.png)
 
 下载MySQL镜像`docker pull mysql`，下载过的则如下图
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591808-7cd9c1ec-a8d6-424a-ba1c-336f6926fae7.png)
+![upload successful](/images/pasted-199.png)
 
 查看已经下载好的镜像`docker images`
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591727-d165c471-40db-44ed-94f1-24b57eb6e199.png)
+![upload successful](/images/pasted-200.png)
 
 接下来通过镜像生成MySQL容器与canal-server容器
 
@@ -141,7 +141,7 @@ docker run -d --name canal-server --net mynetwork --ip 172.18.0.4 -p 11111:11111
 
 查看docker中运行的容器`docker ps`
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591704-177ca19f-cdff-4b30-9622-69397d1958d2.png)
+![upload successful](/images/pasted-201.png)
 
 ### MySQL的配置修改
 
@@ -171,7 +171,7 @@ FLUSH PRIVILEGES;
 
 数据库重启后, 简单测试 my.cnf 配置是否生效
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591772-099b4163-a60f-4a3f-95bc-c3775611a994.png)
+![upload successful](/images/pasted-202.png)
 
 ```sql
 show variables like 'log_bin';
@@ -184,7 +184,7 @@ show master status;
 进入canal-server容器`docker exec -it canal-server bash`
 编辑canal-server的配置`vi canal-server/conf/example/instance.properties`
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591753-9af08611-592d-49e8-ad3c-a25a37573bd2.png)
+![upload successful](/images/pasted-203.png)
 
 更多配置请参考==>[canal配置说明](https://github.com/alibaba/canal/wiki/AdminGuide)
 重启canal-server容器`docker restart canal-server`
@@ -195,7 +195,7 @@ docker exec -it canal-server bash
 tail -100f canal-server/logs/example/example.log
 ```
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591703-3507e56a-fa73-495a-aa9c-d975c365f1ae.png)
+![upload successful](/images/pasted-204.png)
 
 至此，我们的环境工作准备完成！！！
 
@@ -214,7 +214,7 @@ docker run -d --name elasticsearch-head --net mynetwork --ip 172.18.0.5 -p 9100:
 
 环境已经准备好了，现在就要开始我们的编码实战部分了，怎么通过应用程序去获取Canal解析后的binlog数据。首先我们基于Spring Boot搭建一个Canal Demo应用。结构如下图所示
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591749-ecdf57fd-800d-48cb-85a7-20f3640dbbbe.png)
+![upload successful](/images/pasted-205.png)
 
 **Student.java**
 
@@ -738,7 +738,7 @@ docker run -d --name canal-server2 --net mynetwork --ip 172.18.0.8 -p 11113:1111
 
 最终效果如图
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591909-9857612f-618e-4910-9ca9-5edb24582ea7.png)
+![upload successful](/images/pasted-206.png)
 
 1. 机器准备
   - 运行Canal的容器ip： 172.18.0.4 , 172.18.0.8
@@ -765,7 +765,7 @@ canal.instance.master.address = 172.18.0.6:3306
 启动两个不同容器的Canal，启动后，可以通过`tail -100f logs/example/example.log`查看启动日志，只会看到一台机器上出现了启动成功的日志。
 比如我这里启动成功的是 172.18.0.4
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591764-5eb8bde2-bf81-4903-9c0d-7c6de281f8b0.png)
+![upload successful](/images/pasted-207.png)
 
 查看一下Zookeeper中的节点信息，也可以知道当前工作的节点为172.18.0.4:11111
 
@@ -838,7 +838,7 @@ http.cors.allow-origin: "*"
 
 ### elasticsearch-head查询报406 Not Acceptable
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591825-b5a3667e-f54c-42b4-8543-e18de3b27d3c.png)
+![upload successful](/images/pasted-208.png)
 
 ```text
 解决方法:
@@ -894,7 +894,7 @@ host 模式是为了性能，但是这却对 docker 的隔离性造成了破坏�
 
 ### 客户端连接Zookeeper报authenticate using SASL(unknow error)
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364592006-2066f0c4-0667-464c-8823-1297f636fac5.png)
+![upload successful](/images/pasted-209.png)
 
 - zookeeper.jar与dokcer中的zookeeper版本不一致
 - zookeeper.jar 使用了3.4.6之前的版本
@@ -907,22 +907,22 @@ host 模式是为了性能，但是这却对 docker 的隔离性造成了破坏�
 
 把canal的官方源码下载到本机`git clone https://github.com/alibaba/canal.git`，然后修改client模块下pom.xml文件中关于zookeeper的内容，然后重新`mvn install`
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591846-e4970d0b-8b55-4f4c-9cd5-ba3704fa95f7.png)
+![upload successful](/images/pasted-210.png)
 
 把自己项目依赖的包替换为刚刚`mvn install`生产的包
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591871-fb7214b6-ccbf-440b-ad65-0377322c35fc.png)
+![upload successful](/images/pasted-211.png)
 
 ### Zookeeper返回的是Docker容器中的IP，而宿主机IP与容器IP不是同一个网段，无法ping通
 
 修改hosts文件只可以实现域名到ip的映射（域名重定向），iptables可以实现端口的重定向，但是这个问题是要通过ip到ip的重定向可以解决，但是研究了一下没找到怎么设置（windows、mac），所以我们修改canal的官方源码来达到我们想要的目的。修改`ClusterCanalConnector.java`中的`connect()`方法。
 以下是修改后内容对比图
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591899-d2adc1f7-1821-4cbc-99b9-81a52b63e04e.png)
+![upload successful](/images/pasted-212.png)
 
 ### 关于选型的取舍
 
-![](https://cdn.nlark.com/yuque/0/2020/png/86832/1582364591907-ef53ccf0-0e59-4413-8682-3e8f521f7ec9.png)
+![upload successful](/images/pasted-213.png)
 
 本文示例项目源代码==>[canal-elasticsearch-sync](https://github.com/jiangeeq/gitchat-code/tree/master/canal_demo)
 

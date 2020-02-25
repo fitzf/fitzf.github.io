@@ -38,8 +38,8 @@ date: 2020-02-21 16:16:35
 
 其结构图如图 1 所示。
 
-[![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204786992-a8aa4fa9-cd84-4e80-b052-2cd1f84a7d9b.gif)](http://c.biancheng.net/uploads/allimg/181119/3-1Q119101429D6.gif)
-<center>图1 访问者（Visitor）模式的结构图（[点此查看原图](http://c.biancheng.net/uploads/allimg/181119/3-1Q119101429D6.gif)）</center>
+![](/images/pasted-75.png)](/images/pasted-75.png)
+<center>图1 访问者（Visitor）模式的结构图（[点此查看原图](/images/pasted-75.png)）</center>
 
 ### 2. 模式的实现
 
@@ -168,7 +168,7 @@ class ObjectStructure {
  List，并提供让访问者对象遍历容器中的所有元素的 accept（Company visitor）方法；客户类设计成窗体程序，它提供材料集（SetMaterial）对象供访问者（Company）对象访问，实现了 
 ItemListener 接口，处理用户的事件请求。图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204786992-52a4d318-ac1a-4fc0-9522-05eccf080772.gif)
+![upload successful](/images/pasted-76.png)
 <center>图2 艺术公司与造币公司的结构图</center>
 
 程序代码如下：
@@ -342,10 +342,10 @@ class SetMaterial {
 
 程序运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582204786982-c51fab7b-b182-48e5-9dc4-46a98bd92083.jpeg)
+![upload successful](/images/pasted-77.png)
 <center>(a)艺术公司设计的产品</center>
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582204786992-66e676bb-5e1a-4f80-bce7-91bdd79e08d1.jpeg)
+![upload successful](/images/pasted-78.png)
 <center>(b)造币公司生产的货币</center>
 <center>图3 艺术公司与造币公司的运行结果</center>
 
@@ -363,7 +363,7 @@ class SetMaterial {
 (1)与“[迭代器模式](http://c.biancheng.net/view/1395.html)”联用。因为访问者模式中的“对象结构”是一个包含元素角色的容器，当访问者遍历容器中的所有元素时，常常要用迭代器。如【例1】中的对象结构是用 List 实现的，它通过 List 对象的 Itemtor() 方法获取迭代器。如果对象结构中的聚合类没有提供迭代器，也可以用迭代器模式自定义一个。
 (2)访问者（Visitor）模式同“[组合模式](http://c.biancheng.net/view/1373.html)”联用。因为访问者（Visitor）模式中的“元素对象”可能是叶子对象或者是容器对象，如果元素对象包含容器对象，就必须用到[组合模式](http://c.biancheng.net/view/1373.html)，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204787029-3e845a88-b637-45d4-94f9-abc09e74dca8.gif)
+![upload successful](/images/pasted-79.png)
 <center>图4 包含组合模式的访问者模式的结构图</center>
 
 > **作者：**C语言中文网

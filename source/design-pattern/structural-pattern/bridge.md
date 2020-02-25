@@ -30,7 +30,7 @@ date: 2020-02-21 15:54:42
 
 其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582199229002-2fcbe543-322f-4eac-8fec-d3b6d9330f48.gif)
+![upload successful](/images/pasted-133.png)
 <center>图1 桥接模式的结构图</center>
 
 ### 2. 模式的实现
@@ -104,7 +104,7 @@ class RefinedAbstraction extends Abstraction {
 颜色类（Color）是一个维度，定义为实现化角色，它有两个具体实现化角色：黄色和红色，通过 getColor() 方法可以选择颜色；包类（Bag）是另一个维度，定义为抽象化角色，它有两个扩展抽象化角色：挎包和钱包，它包含了颜色类对象，通过 getName() 方法可以选择相关颜色的挎包和钱包。
 客户类通过 ReadXML 类从 XML 配置文件中获取包信息（[点此下载 XML 配置文件](http://c.biancheng.net/uploads/soft/181113/3-1Q115130045.zip)），并把选到的产品通过窗体显示出现，图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582199229266-ab99754b-994d-4bc3-a015-a7a490a599ce.gif)
+![upload successful](/images/pasted-134.png)
 <center>图2 女士皮包选购的结构图</center>
 
 程序代码如下：
@@ -238,7 +238,7 @@ class ReadXML {
 
 程序的运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582199229026-687c9a65-9235-4010-86db-5545d012aa15.jpeg)
+![upload successful](/images/pasted-135.png)
 <center>图3 女士皮包选购的运行结果1</center>
 
 如果将 XML 配置文件按如下修改：
@@ -253,7 +253,7 @@ class ReadXML {
 
 则程序的运行结果如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582199229036-d5da7947-5b5a-4b11-9698-d5f9a2b69660.jpeg)
+![upload successful](/images/pasted-136.png)
 <center>图4 女士皮包选购的运行结果2</center>
 
 ## 桥接模式的应用场景
@@ -268,7 +268,7 @@ class ReadXML {
 
 在软件开发中，有时桥接（Bridge）模式可与[适配器模式](http://c.biancheng.net/view/1361.html)联合使用。当桥接（Bridge）模式的实现化角色的接口与现有类的接口不一致时，可以在二者中间定义一个适配器将二者连接起来，其具体结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582199229046-85c618b1-826c-4976-b1a8-fd34e88e1436.gif)
+![upload successful](/images/pasted-137.png)
 <center>图5 桥接模式与适配器模式联用的结构图</center>
 
 > **作者：**C语言中文网

@@ -31,7 +31,7 @@ date: 2020-02-21 15:00:34
 
 其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582196138558-7cf3610f-b448-4758-a3f7-5f99c3fbac01.gif)
+![upload successful](/images/pasted-153.png)
 <center>图1 工厂方法模式的结构图</center>
 
 ### 2. 模式的实现
@@ -162,7 +162,7 @@ class ReadXML1 {
 对养马场和养牛场等具体工厂类，只要定义一个生成动物的方法 newAnimal() 即可。由于要显示马类和牛类等具体产品类的图像，所以它们的构造函数中用到了 JPanel、JLabd 和 ImageIcon 等组件，并定义一个 show() 方法来显示它们。
 客户端程序通过对象生成器类 ReadXML2 读取 XML 配置文件中的数据来决定养马还是养牛。其结构图如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582196138559-d455410b-99ec-40e1-9e03-fbc0c0695afd.gif)
+![upload successful](/images/pasted-154.png)
 <center>图2 畜牧场结构图</center>
 
 注意：该程序中用到了 XML 文件，并且要显示马类和牛类等具体产品类的图像，如果想要获取 HTML 文件和图片，请点击“[下载](http://c.biancheng.net/uploads/soft/181113/3-1Q114140526.zip)”，就可以对其进行下载。
@@ -312,7 +312,7 @@ class ReadXML2 {
 
 程序的运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582196138585-cf0508c7-3a15-4af9-9136-d73e429d3291.gif)
+![upload successful](/images/pasted-155.png)
 <center>图3 畜牧场养殖的运行结果</center>
 
 ## 模式的应用场景
@@ -327,7 +327,7 @@ class ReadXML2 {
 
 当需要生成的产品不多且不会增加，一个具体工厂类就可以完成任务时，可删除抽象工厂类。这时工厂方法模式将退化到简单工厂模式，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582196138595-bfc2a08b-f7d7-4ef7-8193-3ef823bce168.gif)
+![upload successful](/images/pasted-156.png)
 <center>图4 简单工厂模式的结构图</center>
 
 > **作者：**C语言中文网

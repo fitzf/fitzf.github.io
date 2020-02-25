@@ -44,7 +44,7 @@ date: 2020-02-21 16:16:38
 
 语法树是句子结构的一种树型表示，它代表了句子的推导结果，它有利于理解句子语法结构的层次。图 1 所示是“我是大学生”的语法树。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582205322651-651543de-dcd4-4605-850d-3dd7e99cb5b6.gif)
+![upload successful](/images/pasted-68.png)
 <center>图1 句子“我是大学生”的语法树</center>
 
 有了以上基础知识，现在来介绍解释器模式的结构就简单了。解释器模式的结构与[组合模式](http://c.biancheng.net/view/1373.html)相似，不过其包含的组成元素比组合模式多，而且组合模式是对象结构型模式，而解释器模式是类行为型模式。
@@ -61,7 +61,7 @@ date: 2020-02-21 16:16:38
 
 解释器模式的结构图如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582205322649-0da2cf55-f273-4fb8-8268-efff16952bc6.gif)
+![upload successful](/images/pasted-69.png)
 <center>图2 解释器模式的结构图</center>
 
 ### 2. 模式的实现
@@ -129,7 +129,7 @@ class Context {
  interpret(String info) 方法，用来判断被分析的字符串是否是满足条件的城市中的满足条件的人员。
 - 最后，定义一个环境（Context）类，它包含解释器需要的数据，完成对终结符表达式的初始化，并定义一个方法 freeRide(String info) 调用表达式对象的解释方法来对被分析的字符串进行解释。其结构图如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582205322650-5297ed8a-1822-4ad2-a49a-eba84a7567f1.gif)
+![upload successful](/images/pasted-70.png)
 <center>图3 “韶粵通”公交车读卡器程序的结构图</center>
 
 程序代码如下：

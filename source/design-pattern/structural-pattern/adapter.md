@@ -31,12 +31,12 @@ date: 2020-02-21 15:54:40
 
 类适配器模式的结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198935115-4fa0e0ba-8777-4406-a2d3-19d8f6586f66.gif)
+![upload successful](/images/pasted-138.png)
 <center>图1 类适配器模式的结构图</center>
 
 对象适配器模式的结构图如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198935136-6e7e9e3f-d868-4986-8a3d-55bd2a059c4f.gif)
+![upload successful](/images/pasted-139.png)
 <center>图2 对象适配器模式的结构图</center>
 
 ### 2. 模式的实现
@@ -132,7 +132,7 @@ public class ObjectAdapterTest {
 客户端希望用统一的发动机驱动方法 drive() 访问这两种发动机，所以必须定义一个统一的目标接口 Motor，然后再定义电能适配器（Electric Adapter）和光能适配器（Optical Adapter）去适配这两种发动机。
 我们把客户端想访问的新能源发动机的适配器的名称放在 XML 配置文件中（[点此下载 XML 文件](http://c.biancheng.net/uploads/soft/181113/3-1Q115110A5.zip)），客户端可以通过对象生成器类 ReadXML 去读取。这样，客户端就可以通过 Motor 接口随便使用任意一种新能源发动机去驱动汽车，图 3 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198935134-a30f206b-2339-48b1-b0cf-1fe8b88ce74d.gif)
+![upload successful](/images/pasted-140.png)
 <center>图3 发动机适配器的结构图</center>
 
 程序代码如下：
@@ -258,7 +258,7 @@ class ReadXML {
 
 适配器模式（Adapter）可扩展为双向适配器模式，双向适配器类既可以把适配者接口转换成目标接口，也可以把目标接口转换成适配者接口，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198935134-f7f60bb5-e260-422e-a122-c962cbc209d4.gif)
+![upload successful](/images/pasted-141.png)
 <center>图4 双向适配器模式的结构图</center>
 
 程序代码如下：

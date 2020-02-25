@@ -31,7 +31,7 @@ date: 2020-02-21 16:16:32
 
 中介者模式的结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204350633-b9a1dfc7-07b5-4586-b4ce-763677996af9.gif)
+![upload successful](/images/pasted-84.png)
 <center>图1 中介者模式的结构图</center>
 
 ### 2. 模式的实现
@@ -147,7 +147,7 @@ class ConcreteColleague2 extends Colleague {
 然后，定义一个客户（Qistomer）类，它是抽象同事类，其中包含了中介者的对象，和发送信息的 send(String ad) 方法与接收信息的 receive(String from，Stringad) 方法的接口，由于本程序是窗体程序，所以本类继承 JPmme 类，并实现动作事件的处理方法 actionPerformed(ActionEvent e)。
 最后，定义卖方（Seller）类和买方（Buyer）类，它们是具体同事类，是客户（Customer）类的子类，它们实现了父类中的抽象方法，通过中介者类进行信息交流，其结构图如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204350587-0c04ae63-7426-405b-8e41-5e63af3ab7c1.gif)
+![upload successful](/images/pasted-85.png)
 <center>图2 韶关房地产交流平台的结构图</center>
 
 程序代码如下：
@@ -319,7 +319,7 @@ class Buyer extends Customer {
 
 程序的运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204350599-0485d980-24a7-4695-a023-cfec5dd1094e.gif)
+![upload successful](/images/pasted-86.png)
 <center>图3 韶关房地产交流平台的运行结果</center>
 
 ## 模式的应用场景
@@ -338,7 +338,7 @@ class Buyer extends Customer {
 
 图 4 所示是简化中介者模式的结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204350592-bd3c3a57-0b98-4807-8c06-878a1389c274.gif)
+![upload successful](/images/pasted-87.png)
 <center>图4 简化中介者模式的结构图</center>
 
 程序代码如下：

@@ -28,7 +28,7 @@ date: 2020-02-21 15:00:29
 
 其结构如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195501093-32386dec-d03b-4960-abc3-cf8e3f6f00fa.gif)
+![upload successful](/images/pasted-163.png)
 <center>图1 单例模式的结构图</center>
 
 ### 2. 单例模式的实现
@@ -83,7 +83,8 @@ public class HungrySingleton {
 
 【例1】用懒汉式单例模式模拟产生美国当今总统对象。
 分析：在每一届任期内，美国的总统只有一人，所以本实例适合用单例模式实现，图 2 所示是用懒汉式单例实现的结构图。
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195501097-222f1e88-7b55-4072-b5a2-fa24ee49f23f.gif)
+
+![upload successful](/images/pasted-164.png)
 <center>图2 美国总统生成器的结构图</center>
 
 程序代码如下：
@@ -142,7 +143,7 @@ class President {
 【例2】用饿汉式单例模式模拟产生猪八戒对象。
 分析：同上例类似，猪八戒也只有一个，所以本实例同样适合用单例模式实现。本实例由于要显示猪八戒的图像（[点此下载该程序所要显示的猪八戒图片](http://c.biancheng.net/uploads/soft/181113/3-1Q1131J636.zip)），所以用到了框架窗体 JFrame 组件，这里的猪八戒类是单例类，可以将其定义成面板 JPanel 的子类，里面包含了标签，用于保存猪八戒的图像，客户窗体可以获得猪八戒对象，并显示它。图 3 所示是用饿汉式单例实现的结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195501159-b88c8a24-2e02-4c32-8b0e-1ded2a79997c.gif)
+![upload successful](/images/pasted-165.png)
 <center>图3 猪八戒生成器的结构图</center>
 
 程序代码如下：
@@ -193,7 +194,7 @@ class Bajie extends JPanel {
 
 程序运行结果如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195501960-16aad152-e702-4448-b8a4-ca323faab04d.gif)
+![upload successful](/images/pasted-166.png)
 <center>图4 猪八戒生成器的运行结果</center>
 
 ## 单例模式的应用场景
@@ -208,7 +209,7 @@ class Bajie extends JPanel {
 
 单例模式可扩展为有限的多例（Multitcm）模式，这种模式可生成有限个实例并保存在 ArmyList 中，客户需要时可随机获取，其结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195501110-85366a92-5773-4db2-8ded-cf81a091ea4f.gif)
+![upload successful](/images/pasted-167.png)
 <center>图5 有限的多例模式的结构图</center>
 
 > **作者：**C语言中文网

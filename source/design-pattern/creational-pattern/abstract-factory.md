@@ -6,7 +6,7 @@ date: 2020-02-21 15:00:36
 同种类称为同等级，也就是说：[工厂方法模式](http://c.biancheng.net/view/1348.html)只考虑生产同等级的产品，但是在现实生活中许多工厂是综合型的工厂，能生产多等级（种类） 的产品，如农场里既养动物又种植物，电器厂既生产电视机又生产洗衣机或空调，大学既有软件专业又有生物专业等。
 本节要介绍的抽象工厂模式将考虑多等级产品的生产，将同一个具体工厂所生产的位于不同等级的一组产品称为一个产品族，图 1 所示的是海尔工厂和 TCL 工厂所生产的电视机与空调对应的关系图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198192714-0206e677-1d59-457b-ad6c-e8ea069d5c41.gif)
+![upload successful](/images/pasted-149.png)
 <center>图1 电器工厂的产品等级与产品族</center>
 
 ## 模式的定义与特点
@@ -40,7 +40,7 @@ date: 2020-02-21 15:00:36
 
 抽象工厂模式的结构图如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198192718-d549a065-fd00-4e43-8cea-b9b32727975d.gif)
+![upload successful](/images/pasted-150.png)
 <center>图2 抽象工厂模式的结构图</center>
 
 ### 2. 模式的实现
@@ -82,7 +82,7 @@ class ConcreteFactory1 implements AbstractFactory {
 对马类、牛类、蔬菜类和水果类等具体产品类，由于要显示它们的图像（[点此下载图片](http://c.biancheng.net/uploads/soft/181113/3-1Q114160J0.zip)），所以它们的构造函数中用到了 JPanel、JLabel 和 ImageIcon 等组件，并定义一个 show() 方法来显示它们。
 客户端程序通过对象生成器类 ReadXML 读取 XML 配置文件中的数据来决定养什么动物和培养什么植物（[点此下载 XML 文件](http://c.biancheng.net/uploads/soft/181113/3-1Q114160S7.zip)）。其结构图如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198192706-e35a1571-e109-47ac-b113-14323d8f4cb0.gif)
+![upload successful](/images/pasted-151.png)
 <center>图3 农场类的结构图</center>
 
 程序代码如下：
@@ -302,7 +302,7 @@ class ReadXML {
 
 程序运行结果如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582198192714-b91c99d6-abf8-49f6-a4bc-84236b14c38d.jpeg)
+![upload successful](/images/pasted-152.png)
 <center>图4 农场养殖的运行结果</center>
 
 ## 模式的应用场景

@@ -36,7 +36,7 @@ date: 2020-02-21 15:00:39
 
 其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198380333-1029936e-471a-4401-ba86-c0dc87ed0925.gif)
+![upload successful](/images/pasted-146.png)
 <center>图1 建造者模式的结构图</center>
 
 ### 2. 模式的实现
@@ -151,7 +151,7 @@ public class Client {
 这里客厅是产品，包括墙、电视和沙发等组成部分。具体装修工人是具体建造者，他们负责装修与墙、电视和沙发的布局。项目经理是指挥者，他负责指挥装修工人进行装修。
 另外，客厅类中提供了 show() 方法，可以将装修效果图显示出来（点此下载装修效果图的图片）。客户端程序通过对象生成器类 ReadXML 读取 XML 配置文件中的装修方案数据（点此下载 XML 文件），调用项目经理进行装修。其类图如图 2 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198380364-8d3b6e8f-6071-4abd-ae2a-95515c0dfa1e.gif)
+![upload successful](/images/pasted-147.png)
 <center>图2 客厅装修的结构图</center>
 
 程序代码如下：
@@ -324,7 +324,7 @@ class ReadXML {
 
 程序运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582198380332-19e90a50-426e-48bc-beb1-bdf7cf341ad9.jpeg)
+![upload successful](/images/pasted-148.png)
 <center>图3 客厅装修的运行结果</center>
 
 ## 模式的应用场景

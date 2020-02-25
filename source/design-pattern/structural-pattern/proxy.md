@@ -33,7 +33,7 @@ date: 2020-02-21 15:54:38
 
 其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198736874-29fd77e4-fa7e-4475-8a8d-ad51bff835f5.gif)
+![upload successful](/images/pasted-142.png)
 <center>图1 代理模式的结构图</center>
 
 ### 2. 模式的实现
@@ -102,7 +102,7 @@ class Proxy implements Subject {
 【例1】韶关“天街e角”公司是一家婺源特产公司的代理公司，用代理模式实现。
 分析：本实例中的“婺源特产公司”经营许多婺源特产，它是真实主题，提供了显示特产的 display() 方法，可以用窗体程序实现（[点此下载该实例所要显示的图片](http://c.biancheng.net/uploads/soft/181113/3-1Q115111318.zip)）。而韶关“天街e角”公司是婺源特产公司特产的代理，通过调用婺源特产公司的 display() 方法显示代理产品，当然它可以增加一些额外的处理，如包裝或加价等。客户可通过“天街e角”代理公司间接访问“婺源特产公司”的产品，图 2 所示是公司的结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198736881-bcb48799-5d34-4e6a-9ae7-ae80e54f9a67.gif)
+![upload successful](/images/pasted-143.png)
 <center>图2 韶关“天街e角”公司的结构图</center>
 
 程序代码如下：
@@ -171,7 +171,7 @@ class SgProxy implements Specialty {
 
 程序运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582198736866-e302cd28-8c6f-4037-801f-fcc2c3cf0506.jpeg)
+![upload successful](/images/pasted-144.png)
 <center>图3 韶关“天街e角”公司的代理产品</center>
 
 ## 代理模式的应用场景
@@ -191,7 +191,7 @@ class SgProxy implements Specialty {
 1. 真实主题与代理主题一一对应，增加真实主题也要增加代理。
 2. 设计代理以前真实主题必须事先存在，不太灵活。采用动态代理模式可以解决以上问题，如 [Spring](http://c.biancheng.net/spring/)AOP，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582198736859-8207849d-464f-40b9-a174-d8baf7204ffa.gif)
+![upload successful](/images/pasted-145.png)
 <center>图4 动态代理模式的结构图</center>
 
 > **作者：**C语言中文网

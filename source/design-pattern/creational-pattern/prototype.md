@@ -22,7 +22,7 @@ date: 2020-02-21 15:00:32
 
 其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195889940-3af65f2f-6b8b-4af5-8f22-270969cf903c.gif)
+![upload successful](/images/pasted-157.png)
 <center>图1 原型模式的结构图</center>
 
 ### 2. 模式的实现
@@ -69,7 +69,7 @@ obj1==obj2?false
 同前面介绍的猪八戒实例一样，由于要显示孙悟空的图像（[点击此处下载该程序所要显示的孙悟空的图片](http://c.biancheng.net/uploads/soft/181113/3-1Q114103933.zip)），所以将孙悟空类定义成面板 JPanel 的子类，里面包含了标签，用于保存孙悟空的图像。
 另外，重写了 Cloneable 接口的 clone() 方法，用于复制新的孙悟空。访问类可以通过调用孙悟空的 clone() 方法复制多个孙悟空，并在框架窗体 JFrame 中显示。图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195889962-9769664c-7c17-486f-afe3-ceb3d1302264.gif)
+![upload successful](/images/pasted-158.png)
 <center>图2 孙悟空生成器的结构图</center>
 
 程序代码如下：
@@ -121,14 +121,14 @@ public class ProtoTypeWukong {
 
 程序的运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195889935-7eb3de1c-728c-439a-a70e-ccd89c6b13ba.gif)
+![upload successful](/images/pasted-159.png)
 <center>图3 孙悟空克隆器的运行结果</center>
 
 用原型模式除了可以生成相同的对象，还可以生成相似的对象，请看以下实例。
 【例2】用原型模式生成“三好学生”奖状。
 分析：同一学校的“三好学生”奖状除了获奖人姓名不同，其他都相同，属于相似对象的复制，同样可以用原型模式创建，然后再做简单修改就可以了。图 4 所示是三好学生奖状生成器的结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195889951-dee73f9b-5aeb-4017-92ae-ba1701cba466.gif)
+![upload successful](/images/pasted-160.png)
 <center>图4 奖状生成器的结构图</center>
 
 程序代码如下：
@@ -200,12 +200,12 @@ class Citation implements Cloneable {
 原型模式可扩展为带原型管理器的原型模式，它在原型模式的基础上增加了一个原型管理器 PrototypeManager 类。该类用 HashMap 
 保存多个复制的原型，Client 类可以通过管理器的 get(String id) 方法从中获取复制的原型。其结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195889960-cfec228f-01cb-4534-b1ce-a19c6235de6f.gif)
+![upload successful](/images/pasted-161.png)
 <center>图5 带原型管理器的原型模式的结构图</center>
 
 【例3】用带原型管理器的原型模式来生成包含“圆”和“正方形”等图形的原型，并计算其面积。分析：本实例中由于存在不同的图形类，例如，“圆”和“正方形”，它们计算面积的方法不一样，所以需要用一个原型管理器来管理它们，图 6 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582195889934-1acda0f3-216c-4e59-981e-6411ce380d73.gif)
+![upload successful](/images/pasted-162.png)
 <center>图6 图形生成器的结构图</center>
 
 程序代码如下：

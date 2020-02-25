@@ -34,7 +34,7 @@ date: 2020-02-21 16:16:28
 
 其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203802531-848dfa15-a900-4250-ad3a-e0b3ec593f7a.gif#)
+![upload successful](/images/pasted-93.png)
 <center>图1 状态模式的结构图</center>
 
 ### 2. 模式的实现
@@ -121,7 +121,7 @@ class ConcreteStateB extends State {
 分析：本实例包含了“不及格”“中等”和“优秀” 3 种状态，当学生的分数小于 60 分时为“不及格”状态，当分数大于等于 60 分且小于 90 分时为“中等”状态，当分数大于等于 90 分时为“优秀”状态，我们用状态模式来实现这个程序。
 首先，定义一个抽象状态类（AbstractState），其中包含了环境属性、状态名属性和当前分数属性，以及加减分方法 addScore(intx) 和检查当前状态的抽象方法 checkState()；然后，定义“不及格”状态类 LowState、“中等”状态类 MiddleState 和“优秀”状态类 HighState，它们是具体状态类，实现 checkState() 方法，负责检査自己的状态，并根据情况转换；最后，定义环境类（ScoreContext），其中包含了当前状态对象和加减分的方法 add(int score)，客户类通过该方法来改变成绩状态。图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203802492-350d92aa-874b-4b68-81b5-e6e0ea8855e9.gif)
+![upload successful](/images/pasted-94.png)
 <center>图2 学生成绩的状态转换程序的结构图</center>
 
 程序代码如下：
@@ -256,12 +256,12 @@ class HighState extends AbstractState {
 【例2】用“状态模式”设计一个多线程的状态转换程序。
 分析：多线程存在 5 种状态，分别为新建状态、就绪状态、运行状态、阻塞状态和死亡状态，各个状态当遇到相关方法调用或事件触发时会转换到其他状态，其状态转换规律如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203802484-2b55eb64-79c2-42ae-86f5-ab60c316f412.gif)
+![upload successful](/images/pasted-95.png)
 <center>图3 线程状态转换图</center>
 
 现在先定义一个抽象状态类（TheadState），然后为图 3 所示的每个状态设计一个具体状态类，它们是新建状态（New）、就绪状态（Runnable ）、运行状态（Running）、阻塞状态（Blocked）和死亡状态（Dead），每个状态中有触发它们转变状态的方法，环境类（ThreadContext）中先生成一个初始状态（New），并提供相关触发方法，图 4 所示是线程状态转换程序的结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203802468-fad0eb7e-2237-4f43-88d5-a5f7957d323d.gif)
+![upload successful](/images/pasted-96.png)
 <center>图4 线程状态转换程序的结构图</center>
 
 程序代码如下：
@@ -440,7 +440,7 @@ class Dead extends ThreadState {
 
 在有些情况下，可能有多个环境对象需要共享一组状态，这时需要引入享元模式，将这些具体状态对象放在集合中供程序共享，其结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582203802495-a994ef60-0572-4a58-b3c8-39af21673724.gif)
+![upload successful](/images/pasted-97.png)
 <center>图5 共享状态模式的结构图</center>
 
 分析：共享状态模式的不同之处是在环境类中增加了一个 HashMap 来保存相关状态，当需要某种状态时可以从中获取，其程序代码如下：

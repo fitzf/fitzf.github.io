@@ -31,7 +31,7 @@ date: 2020-02-21 15:54:46
 
 图 1 是享元模式的结构图。图中的 UnsharedConcreteFlyweight 是与淳元角色，里面包含了非共享的外部状态信息 info；而 Flyweight 是抽象享元角色，里面包含了享元方法 operation(UnsharedConcreteFlyweight state)，非享元的外部状态以参数的形式通过该方法传入；ConcreteFlyweight 是具体享元角色，包含了关键字 key，它实现了抽象享元接口；FlyweightFactory 是享元工厂角色，它逝关键字 key 来管理具体享元；客户角色通过享元工厂获取具体享元，并访问具体享元的相关方法。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202386122-4d548975-fce7-4038-aa9a-2a69eb7eaf29.gif)
+![upload successful](/images/pasted-118.png)
 <center>图1 享元模式的结构图</center>
 
 ### 2. 模式的实现
@@ -139,7 +139,7 @@ class FlyweightFactory {
 分析：五子棋同围棋一样，包含多个“黑”或“白”颜色的棋子，所以用享元模式比较好。
 本实例中的棋子（ChessPieces）类是抽象享元角色，它包含了一个落子的 DownPieces(Graphics g,Point pt) 方法；白子（WhitePieces）和黑子（BlackPieces）类是具体享元角色，它实现了落子方法；Point 是非享元角色，它指定了落子的位置；WeiqiFactory 是享元工厂角色，它通过 ArrayList 来管理棋子，并且提供了获取白子或者黑子的 getChessPieces(String type) 方法；客户类（Chessboard）利用 Graphics 组件在框架窗体中绘制一个棋盘，并实现 mouseClicked(MouseEvent e) 事件处理方法，该方法根据用户的选择从享元工厂中获取白子或者黑子并落在棋盘上。图 2 所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202386122-96a41df6-b6cf-47bd-a568-c965e7b31168.gif)
+![upload successful](/images/pasted-119.png)
 <center>图2 五子棋游戏的结构图</center>
 
 程序代码如下：
@@ -278,7 +278,7 @@ class WeiqiFactory {
 
 程序运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202386121-8098ed01-945d-4339-948b-810d54b55a82.gif)
+![upload successful](/images/pasted-120.png)
 <center>图3 五子棋游戏的运行结果</center>
 
 ## 享元模式的应用场景
@@ -294,12 +294,12 @@ class WeiqiFactory {
 在前面介绍的享元模式中，其结构图通常包含可以共享的部分和不可以共享的部分。在实际使用过程中，有时候会稍加改变，即存在两种特殊的享元模式：单纯享元模式和复合享元模式，下面分别对它们进行简单介绍。
 (1) 单纯享元模式，这种享元模式中的所有的具体享元类都是可以共享的，不存在非共享的具体享元类，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202386122-fdf1cf3d-b9d8-4917-8577-057621669f5a.gif)
+![upload successful](/images/pasted-121.png)
 <center>图4 单纯享元模式的结构图</center>
 
 (2) 复合享元模式，这种享元模式中的有些享元对象是由一些单纯享元对象组合而成的，它们就是复合享元对象。虽然复合享元对象本身不能共享，但它们可以分解成单纯享元对象再被共享，其结构图如图 5 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582202386126-8bebf30f-6da6-46ac-a3ff-5b764f0502cc.gif)
+![upload successful](/images/pasted-122.png)
 <center>图5 复合享元模式的结构图</center>
 
 > **作者：**C语言中文网

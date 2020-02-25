@@ -37,7 +37,7 @@ date: 2020-02-21 16:16:33
 
 其结构图如图 1 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204594018-a7404e96-cc2c-4872-9d9a-5ad69f2442d2.gif)
+![upload successful](/images/pasted-80.png)
 <center>图1 迭代器模式的结构图</center>
 
 ### 2. 模式的实现
@@ -156,7 +156,7 @@ First：中山大学
 然后，定义一个婺源景点集（WyViewSpotSet）类，它是具体聚合类，用 ArrayList 来保存所有景点信息，并实现父类中的抽象方法；再定义婺源景点的抽象迭代器（ViewSpotltemtor）接口，其中包含了查看景点信息的相关方法。
 最后，定义婺源景点的具体迭代器（WyViewSpotlterator）类，它实现了父类的抽象方法；客户端程序设计成窗口程序，它初始化婺源景点集（ViewSpotSet）中的数据，并实现 ActionListener 接口，它通过婺源景点迭代器（ViewSpotlterator）来査看婺源景点（WyViewSpot）的信息。图 2所示是其结构图。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204594034-97e2e642-b2dd-4f6a-b8b5-1c429ba10235.gif)
+![upload successful](/images/pasted-81.png)
 <center>图2 婺源旅游风景图浏览程序的结构图（[点此查看原图](http://c.biancheng.net/uploads/allimg/181116/3-1Q1161P940959.gif)）</center>
 
 程序代码如下：
@@ -378,8 +378,8 @@ class WyViewSpotIterator implements ViewSpotIterator {
 
 程序运行结果如图 3 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/jpeg/86832/1582204594015-65ea3002-b513-46ab-858d-1151378a55f1.jpeg)
-<center>图3 婺源旅游风景图浏览程序的运行结果（[点此查看原图](http://c.biancheng.net/uploads/allimg/181116/3-1Q1161Q123121.gif)）</center>
+![upload successful](/images/pasted-82.png)
+<center>图3 婺源旅游风景图浏览程序的运行结果（[点此查看原图](/images/pasted-82.png)）</center>
 
 ## 模式的应用场景
 
@@ -395,7 +395,7 @@ class WyViewSpotIterator implements ViewSpotIterator {
 
 迭代器模式常常与[组合模式](http://c.biancheng.net/view/1373.html)结合起来使用，在对组合模式中的容器构件进行访问时，经常将迭代器潜藏在组合模式的容器构成类中。当然，也可以构造一个外部迭代器来对容器构件进行访问，其结构图如图 4 所示。
 
-![](https://cdn.nlark.com/yuque/0/2020/gif/86832/1582204594031-4c850fc1-414b-45b1-90d0-a7dae92c947b.gif)
+![upload successful](/images/pasted-83.png)
 <center>图4 组合迭代器模式的结构图</center>
 
 > **作者：**C语言中文网
