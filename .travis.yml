@@ -29,7 +29,7 @@ branches:
 
 deploy:
   provider: pages
-  keep_history: true
+  skip_cleanup: true
   github_token: $GH_TOKEN # Set in the settings page of your repository, as a secure variable
   on:
     branch: blog-source
