@@ -30,7 +30,7 @@ branches:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN # Set in travis-ci.org dashboard
+  github_token: $GH_TOKEN # Set in travis-ci.com dashboard
   on:
     branch: blog-source
   local_dir: public
