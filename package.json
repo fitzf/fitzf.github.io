@@ -31,12 +31,12 @@
     "hexo-renderer-marked": "^2.0.0",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
-    "hexo-symbols-count-time": "^0.7.0",
+    "hexo-symbols-count-time": "^0.7.1",
     "live2d-widget-model-hijiki": "^1.0.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "@babel/register": "^7.8.3",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
