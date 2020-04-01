@@ -22,7 +22,7 @@
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^2.0.0",
     "hexo-generator-index": "^1.0.0",
-    "hexo-generator-searchdb": "^1.2.0",
+    "hexo-generator-searchdb": "^1.2.1",
     "hexo-generator-sitemap": "^2.0.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-helper-live2d": "^3.1.1",
@@ -35,9 +35,9 @@
     "live2d-widget-model-hijiki": "^1.0.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/register": "^7.8.3",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@babel/register": "^7.9.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
