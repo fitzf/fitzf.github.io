@@ -61,13 +61,12 @@ footer:
 
   # Icon between year and copyright info.
   icon:
-    # Icon name in Font Awesome. See: https://fontawesome.com/v4.7.0/icons/
-    # `heart` is recommended with animation in red (#ff0000).
-    name: fa fa-user
+    # Icon name in Font Awesome. See: https://fontawesome.com/icons
+    name: fa fa-heart
     # If you want to animate the icon, set it to true.
     animated: false
     # Change the color of icon, using Hex Code.
-    color: "#808080"
+    color: "#ff0000"
 
   # If not defined, `author` from Hexo `_config.yml` will be used.
   copyright:
@@ -220,16 +219,16 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/zhangfei9734 || github
-  E-Mail: mailto:zhangfei.eason@gmail.com || envelope
-  #Weibo: https://weibo.com/yourname || weibo
-  #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
-  FB Page: https://www.facebook.com/zhangfeicn || facebook
-  StackOverflow: https://stackoverflow.com/users/7614492/eason-zhang || stack-overflow
-  #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
-  #Skype: skype:yourname?call|chat || skype
+  GitHub: https://github.com/zhangfei9734 || fab fa-github
+  E-Mail: mailto:zhangfei.eason@gmail.com || fa fa-envelope
+  #Weibo: https://weibo.com/yourname || fab fa-weibo
+  #Google: https://plus.google.com/yourname || fab fa-google
+  #Twitter: https://twitter.com/yourname || fab fa-twitter
+  FB Page: https://www.facebook.com/zhangfeicn || fab fa-facebook
+  StackOverflow: https://stackoverflow.com/users/7614492/eason-zhang || fab fa-stack-overflow
+  #YouTube: https://youtube.com/yourname || fab fa-youtube
+  #Instagram: https://instagram.com/yourname || fab fa-instagram
+  #Skype: skype:yourname?call|chat || fab fa-skype
 
 social_icons:
   enable: true
